@@ -1,0 +1,55 @@
+.menuBar {
+  margin-right: 0.6rem;
+}
+
+.logo {
+  margin-left: 0.6rem;
+  width: 9.42rem;
+  height: 3.5rem;
+  max-width: 9.42rem;
+  max-height: 3.5rem;
+  position: 'relative';
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+/* creating vertical menu list */
+.menuList {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 3.5rem;
+  width: 288px;
+  /* row-gap: 24px; */
+  right: -288px;
+  padding: 24px 16px;
+  transition: all 0.2s;
+  min-height: calc(100vh - 3.5rem);
+  background-color: white;
+}
+
+/* moving vertical menu list to the left */
+.menuList.active {
+  right: 0;
+}
+
+@media screen and (min-width: 1060px) {
+
+  /* creating horizontal menu list */
+  .menuList {
+    position: unset;
+    flex-direction: row;
+    min-height: fit-content;
+    width: fit-content;
+    column-gap: 0.5rem;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    align-items: center;
+  }
+
+  .menuBar {
+    display: none;
+  }
+}

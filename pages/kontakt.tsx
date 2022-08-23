@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 const CheckboxIcon: CheckboxProps['icon'] = ({ indeterminate, className }) =>
   indeterminate ? <IconLeaf className={className} /> : <IconLeaf className={className} />
 
-export default function Home() {
+export default function Kontakt() {
   return (
     <Layout>
       <div className={styles.container}>
