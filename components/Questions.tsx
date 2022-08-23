@@ -24,26 +24,6 @@ export default function Questions() {
 
     setCheckedState(updatedCheckedState)
     updateScore(updatedCheckedState, inhabitants)
-
-    // const totalPoints = updatedCheckedState.reduce(
-    //   (sum, currentState, index) => {
-    //     if (currentState === true) {
-    //       if (index >= 11 && index <= 15) {
-    //         return sum + values[index] / inhabitants
-    //       }
-    //       return sum + values[index]
-    //     }
-    //     return sum
-    //   },
-    //   145
-    // )
-
-    // if (updatedCheckedState.every(value => value === false)) {
-    //   setTotal(0)
-    // }
-    // else {
-    //   setTotal(totalPoints)
-    // }
   }
 
   const updateScore = (argCheckedState: Array<boolean>, updatedInhabitants: number) => {
@@ -112,7 +92,7 @@ export default function Questions() {
                 {area.title === 'MIESZKANIE' ?
                   <>
                     Wprowadź liczbę osób mieszkających w Twoim domu:
-                    <NumberInput radius={4} min={1} defaultValue={1} size='xs' value={inhabitants} onChange={(val: number) => {
+                    <NumberInput radius={4} min={1} defaultValue={1} size='sm' value={inhabitants} onChange={(val: number) => {
                       setInhabitants(val)
                       updateScore(checkedState, val)
                     }} />
