@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { IconChevronDown } from '@tabler/icons';
 import styles from '../styles/NavItem.module.css'
+import { isStringObject } from 'util/types';
 
 interface linksProps {
-  links: { label: string; link: string; links?: { label: string; link: string }[] }[]
+  links: { label: string; link?: string; links?: { label: string; link: string }[] }[]
 }
 
 export default function NavItem({ links }: linksProps) {
@@ -14,7 +15,7 @@ export default function NavItem({ links }: linksProps) {
     if (hasLinks) {
       const subItems = link.links?.map((subLink) => {
         return (
-          <div key={subLink.link}>
+          <div key={subLink.label}>
             <Link href={subLink.link}>
               <a className={styles.link}>{subLink.label}</a>
             </Link>
@@ -23,13 +24,12 @@ export default function NavItem({ links }: linksProps) {
       })
 
       return (
-        <div className={styles.dropdown} key={link.link}>
-          <Link href={link.link}>
-            <a className={[styles.highlight, styles.link].join(' ')}>
-              {link.label}
-              {hasLinks && <><>&nbsp;</><IconChevronDown size={14} stroke={2.5} /></>}
-            </a>
-          </Link>
+        <div className={styles.dropdown} key={link.label}>
+          <div className={[styles.highlight, styles.link].join(' ')}>
+            {link.label}
+            <>&nbsp;</>
+            <IconChevronDown size={14} stroke={2.5} />
+          </div>
           <div className={styles.dropdownContent}>
             {subItems}
           </div>
@@ -38,10 +38,12 @@ export default function NavItem({ links }: linksProps) {
     }
 
     return (
-      <div key={link.link}>
-        <Link href={link.link}>
-          <a className={[styles.highlight, styles.link].join(' ')}>{link.label}</a>
-        </Link>
+      <div key={link.label}>
+        {link.link &&
+          <Link href={link.link}>
+            <a className={[styles.highlight, styles.link].join(' ')}>{link.label}</a>
+          </Link>
+        }
       </div>
     )
   })

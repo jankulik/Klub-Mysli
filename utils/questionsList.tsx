@@ -25,7 +25,7 @@ export const questionsList = [
     questions: [
       { id: 11, content: 'Zajmujesz kawalerkę w bloku', value: 7 },
       { id: 12, content: 'Zajmujesz domek szeregowy', value: 15 },
-      { id: 13, content: 'Zajujesz duży apartament w bloku', value: 12 },
+      { id: 13, content: 'Zajmujesz duży apartament w bloku', value: 12 },
       { id: 14, content: 'Zajmujesz połowę bliźniaka', value: 23 },
       { id: 15, content: 'Zajmujesz wolno stojący dom', value: 33 }
     ]

@@ -14,9 +14,9 @@ interface sizeType {
 const menuList = [
   { label: 'Strona Główna', link: '/' },
   { label: 'O Nas', link: '/o-nas' },
-  { label: 'Spotkania', link: '/spotkania', links: [{ label: 'Zapowiedzi', link: '/zapowiedzi' }, { label: 'Archiwum', link: '/archiwum' }] },
+  { label: 'Spotkania', links: [{ label: 'Zapowiedzi', link: '/zapowiedzi' }, { label: 'Archiwum', link: '/archiwum' }] },
   { label: 'Warsztaty', link: '/warsztaty' },
-  { label: 'Edukacja', link: '/edukacja', links: [{ label: 'Ekologia', link: '/ekologia' }, { label: 'Ekopsychologia', link: '/ekopsychologia' }, { label: 'Kalkulator Śladu Ekologicznego', link: '/kalkulator' }] },
+  { label: 'Edukacja', links: [{ label: 'Ekologia', link: '/ekologia' }, { label: 'Ekopsychologia', link: '/ekopsychologia' }, { label: 'Kalkulator Śladu Ekologicznego', link: '/kalkulator' }] },
   { label: 'Ośrodek Źródło', link: '/osrodek-zrodlo' },
   { label: 'Kontakt', link: '/kontakt' }
 ]
