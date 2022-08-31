@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import React, { useState, useEffect } from 'react'
-import NavItem from './NavItem'
-import { Burger } from '@mantine/core'
-import Sidebar from '../components/Sidebar'
-import styles from '../styles/Navbar.module.css'
+import Link from 'next/link';
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import { Burger } from '@mantine/core';
+import NavItem from '../NavItem/NavItem';
+import Sidebar from '../Sidebar/Sidebar';
+import { useStyles } from './Navbar.styles';
 
 interface sizeType {
   width: number | undefined;
@@ -35,30 +35,32 @@ function useWindowSize(): sizeType {
       });
     }
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     handleResize();
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return windowSize;
 }
 
 export default function Navbar() {
+  const { classes, cx } = useStyles();
+
   const [navActive, setNavActive] = useState(false)
   const [opened, setOpened] = useState(false)
   const size: sizeType = useWindowSize();
 
   const generateMenu = () => {
-    if (size?.width && size.width < 1060) {
+    if (size?.width && size.width < 768) {
       return (
-        <div className={navActive ? [styles.menuList, styles.active].join(' ') : styles.menuList}>
+        <div className={cx(classes.menuList, { [classes.active]: navActive === true })}>
           <Sidebar links={menuList} />
         </div>
       )
     }
 
     return (
-      <div className={styles.menuList}>
+      <div className={classes.menuList}>
         {menuList.map((menu) => (
           <div onClick={() => { setNavActive(false) }} key={menu.label}>
             <NavItem links={[{ ...menu }]} />
@@ -69,10 +71,10 @@ export default function Navbar() {
   }
 
   return (
-    <header>
-      <nav className={`nav`}>
+    <header className={classes.header}>
+      <nav className={classes.navbar}>
         <Link href={'/'}>
-          <div className={styles.logo}>
+          <div className={classes.logo}>
             <Image
               alt='Logo'
               src='/images/logo.jpg'
@@ -80,11 +82,12 @@ export default function Navbar() {
               height='37.15%'
               layout='responsive'
               objectFit='contain'
+              priority={true}
             />
           </div>
         </Link>
 
-        <div className={styles.menuBar}>
+        <div className={classes.menuBar}>
           <Burger
             opened={opened}
             onClick={() => {

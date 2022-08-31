@@ -1,13 +1,13 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import { IconChevronDown } from '@tabler/icons';
-import styles from '../styles/NavItem.module.css'
-import { isStringObject } from 'util/types';
+import { useStyles } from './NavItem.styles';
 
 interface linksProps {
   links: { label: string; link?: string; links?: { label: string; link: string }[] }[]
 }
 
 export default function NavItem({ links }: linksProps) {
+  const { classes, cx } = useStyles();
 
   const items = links.map((link) => {
     const hasLinks = Array.isArray(link.links);
@@ -17,20 +17,20 @@ export default function NavItem({ links }: linksProps) {
         return (
           <div key={subLink.label}>
             <Link href={subLink.link}>
-              <a className={styles.link}>{subLink.label}</a>
+              <a className={classes.link}>{subLink.label}</a>
             </Link>
           </div>
         )
       })
 
       return (
-        <div className={styles.dropdown} key={link.label}>
-          <div className={[styles.highlight, styles.link].join(' ')}>
+        <div className={classes.dropdown} key={link.label}>
+          <div className={cx(classes.highlight, classes.link)}>
             {link.label}
             <>&nbsp;</>
             <IconChevronDown size={14} stroke={2.5} />
           </div>
-          <div className={styles.dropdownContent}>
+          <div className={classes.dropdownContent}>
             {subItems}
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function NavItem({ links }: linksProps) {
       <div key={link.label}>
         {link.link &&
           <Link href={link.link}>
-            <a className={[styles.highlight, styles.link].join(' ')}>{link.label}</a>
+            <a className={cx(classes.highlight, classes.link)}>{link.label}</a>
           </Link>
         }
       </div>

@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
-import { Checkbox, Collapse, NumberInput } from '@mantine/core'
-import { questionsList, resultsList } from '../utils/questionsList'
-import styles from '../styles/Questions.module.css'
+import React, { useState } from 'react';
+import { Checkbox, Collapse, NumberInput, Button, Box } from '@mantine/core';
+import { questionsList, resultsList } from '../../utils/questionsList';
+import { useStyles } from './Questions.styles';
 
 export default function Questions() {
+  const { classes, cx } = useStyles();
+
   let values: Array<number> = []
 
   for (let i = 0; i < questionsList.length; i++) {
@@ -85,7 +87,7 @@ export default function Questions() {
     <>
       {questionsList.map((area) => {
         return (
-          <div key={area.title} className={styles.rectangle}>
+          <div key={area.title} className={classes.rectangle}>
             <div>
               <h2>{area.title}</h2><br />
               <>
@@ -96,49 +98,61 @@ export default function Questions() {
                       setInhabitants(val)
                       updateScore(checkedState, val)
                     }} />
-                    <span className={styles.break}></span>
+                    <span className={classes.break}></span>
                   </> :
                   null}
                 {area.questions.map((question) => {
                   return (
                     <div key={question.id}>
-                      <Checkbox radius={4} onChange={() => handleOnChange(question.id)} size='md' color='green'
-                        sx={{
-                          '&:hover': {
-                            cursor: 'pointer'
-                          }
-                        }}
+                      <Checkbox
+                        radius={4}
+                        onChange={() => handleOnChange(question.id)}
+                        size='md'
+                        color='green'
                         label={
-                          <div className={styles.checkboxText}>
+                          <div className={classes.checkboxText}>
                             {question.content}
                           </div>
                         }
                       />
-                      <span className={styles.break}></span>
+                      <span className={classes.break}></span>
                     </div>
                   )
                 })}
               </>
             </div>
           </div>
-        )
+        );
       })}
 
-      <div className={styles.buttonWrapper}>
-        <button className={styles.button} onClick={() => setOpened((o) => [!o[0], o[1]])}>Zobacz wynik</button>
+      <Box
+        sx={(theme) => ({
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        })}
+      >
+        <Button>
+          Zobacz wynik
+        </Button>
+      </Box>
+
+      <div className={classes.buttonWrapper}>
+        <button className={classes.button} onClick={() => setOpened((o) => [!o[0], o[1]])}>Zobacz wynik</button>
       </div>
 
       <Collapse in={opened[0]} transitionDuration={400}>
-        <div className={styles.rectangle2}>
+        <div className={classes.rectangle2}>
           {renderResult(total)}
         </div>
 
-        <div className={styles.buttonWrapper}>
-          <button className={styles.button} onClick={() => setOpened((o) => [o[0], !o[1]])}>Zobacz szczegóły</button>
+        <div className={classes.buttonWrapper}>
+          <button className={classes.button} onClick={() => setOpened((o) => [o[0], !o[1]])}>Zobacz szczegóły</button>
         </div>
 
         <Collapse in={opened[1]} transitionDuration={400}>
-          <div className={styles.rectangle2}>
+          <div className={classes.rectangle2}>
             {resultsList.map((result, index, results) => {
               return (
                 <div key={result.boundary}>
