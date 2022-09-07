@@ -1,53 +1,92 @@
-import React, { useState } from 'react';
-import { Checkbox, Collapse, NumberInput, Button, Box } from '@mantine/core';
+import React, { useState, useRef } from 'react';
+import { Checkbox, Slider, Collapse, NumberInput, Button, Box } from '@mantine/core';
 import { questionsList, resultsList } from '../../utils/questionsList';
 import { useStyles } from './Questions.styles';
 
 export default function Questions() {
   const { classes, cx } = useStyles();
 
-  let values: Array<number> = []
+  const checkboxValues: Array<number> = [];
+  const sliderValues: Array<number> = []
 
   for (let i = 0; i < questionsList.length; i++) {
     for (let j = 0; j < questionsList[i].questions.length; j++) {
-      values.push(questionsList[i].questions[j].value)
+      checkboxValues[questionsList[i].questions[j].id] = questionsList[i].questions[j].value ?? 0;
+      sliderValues[questionsList[i].questions[j].id] = questionsList[i].questions[j].slider?.value ?? 0;
     }
   }
 
-  const [checkedState, setCheckedState] = useState(new Array(values.length).fill(false))
-  const [total, setTotal] = useState(0)
-  const [opened, setOpened] = useState(new Array(2).fill(false))
-  const [inhabitants, setInhabitants] = useState(1)
+  const [opened, setOpened] = useState(new Array(2).fill(false));
+  const [points, setPoints] = useState(0);
 
-  const handleOnChange = (position: number) => {
-    const updatedCheckedState = checkedState.map((item, index) =>
-      index === position ? !item : item
-    )
+  const [inhabitants, setInhabitants] = useState(1);
+  const [checkboxState, setCheckboxState] = useState(new Array<boolean>(checkboxValues.length).fill(false));
+  const [sliderState, setSliderState] = useState(new Array<number>(sliderValues.length).fill(0));
 
-    setCheckedState(updatedCheckedState)
-    updateScore(updatedCheckedState, inhabitants)
+  const inhabitantsRef = useRef(inhabitants);
+  const checkboxStateRef = useRef(checkboxState);
+  const sliderStateRef = useRef(sliderState);
+
+  const setInhabitantsRef = (data: number) => {
+    inhabitantsRef.current = data;
+    setInhabitants(data);
+  };
+
+  const setCheckboxStateRef = (data: Array<boolean>) => {
+    checkboxStateRef.current = data;
+    setCheckboxState(data);
+  };
+
+  const setSliderStateRef = (data: Array<number>) => {
+    sliderStateRef.current = data;
+    setSliderState(data);
+  };
+
+  const checkboxChange = (id: number) => {
+    const updatedCheckboxState: Array<boolean> = checkboxStateRef.current.map((item, index) =>
+      index === id ? !item : item
+    );
+
+    setCheckboxStateRef(updatedCheckboxState);
+    updateScore(updatedCheckboxState, sliderStateRef.current, inhabitants);
   }
 
-  const updateScore = (argCheckedState: Array<boolean>, updatedInhabitants: number) => {
-    const totalPoints = argCheckedState.reduce(
-      (sum, currentState, index) => {
-        if (currentState === true) {
+  const sliderChange = (state: number, id: number) => {
+    const updatedSliderState: Array<number> = sliderStateRef.current.map((item, index) =>
+      index === id ? state : item
+    );
+
+    setSliderStateRef(updatedSliderState);
+    updateScore(checkboxStateRef.current, updatedSliderState, inhabitants);
+  }
+
+  const updateScore = (updatedCheckboxState: Array<boolean>, updatedSliderState: Array<number>, updatedInhabitants: number) => {
+    var totalPoints: number = 145;
+
+    totalPoints += updatedCheckboxState.reduce(
+      (sum: number, state: boolean, index: number) => {
+        if (state === true) {
           if (index >= 11 && index <= 15) {
-            return sum + values[index] / updatedInhabitants
+            return sum + checkboxValues[index] / updatedInhabitants;
           }
-          return sum + values[index]
+          return sum + checkboxValues[index];
         }
-        return sum
+        return sum;
       },
-      145
-    )
+      0
+    );
 
-    if (argCheckedState.every(value => value === false)) {
-      setTotal(0)
-    }
-    else {
-      setTotal(totalPoints)
-    }
+    totalPoints += updatedSliderState.reduce(
+      (sum: number, state: number, index: number) => {
+        return sum + sliderValues[index] * state;
+      },
+      0
+    );
+
+    if (updatedCheckboxState.every(value => value === false) && updatedSliderState.every(value => value === 0))
+      setPoints(0);
+    else
+      setPoints(totalPoints);
   }
 
   const renderResult = (result: number) => {
@@ -57,13 +96,14 @@ export default function Questions() {
       if (result >= resultsList[i].boundary) {
         return (
           <div>
-            <h2>Twój wynik to {result}
-              {((String(result).slice(-1) === '2' ||
-                String(result).slice(-1) === '3' ||
-                String(result).slice(-1) === '4') &&
-                String(result).slice(-2, -1) !== '1') ? ' punkty' : ' punktów'}
-            </h2>
-
+            <div className={classes.center}>
+              <h2>Twój wynik to {result}
+                {((String(result).slice(-1) === '2' ||
+                  String(result).slice(-1) === '3' ||
+                  String(result).slice(-1) === '4') &&
+                  String(result).slice(-2, -1) !== '1') ? ' punkty' : ' punktów'}
+              </h2>
+            </div>
 
             {result > 0 ?
               <>
@@ -85,28 +125,28 @@ export default function Questions() {
 
   return (
     <>
+      <div className={cx(classes.rectangle, classes.center)}>
+        <div>
+          <h1 style={{ lineHeight: '2rem' }}>Czy wystarczy nam Ziemi? Kalkulator śladu ekologicznego</h1>
+          <p><br />Wybierz wszystkie odpowiedzi, które są najbliższe Twojemu stylowi życia</p>
+        </div>
+      </div>
+
       {questionsList.map((area) => {
         return (
           <div key={area.title} className={classes.rectangle}>
-            <div>
-              <h2>{area.title}</h2><br />
-              <>
-                {area.title === 'MIESZKANIE' ?
-                  <>
-                    Wprowadź liczbę osób mieszkających w Twoim domu:
-                    <NumberInput radius={4} min={1} defaultValue={1} size='sm' value={inhabitants} onChange={(val: number) => {
-                      setInhabitants(val)
-                      updateScore(checkedState, val)
-                    }} />
-                    <span className={classes.break}></span>
-                  </> :
-                  null}
-                {area.questions.map((question) => {
+            <div className={classes.center}>
+              <h2>{area.title}</h2>
+            </div>
+            <br />
+            <>
+              {area.questions.map((question) => {
+                if (question.value !== undefined) {
                   return (
                     <div key={question.id}>
                       <Checkbox
+                        onChange={() => checkboxChange(question.id)}
                         radius={4}
-                        onChange={() => handleOnChange(question.id)}
                         size='md'
                         color='green'
                         label={
@@ -118,41 +158,97 @@ export default function Questions() {
                       <span className={classes.break}></span>
                     </div>
                   )
-                })}
-              </>
-            </div>
+                }
+                else if (question.slider !== undefined) {
+                  return (
+                    <div key={question.id}>
+                      <br />
+                      <div className={classes.center}>
+                        {question.content}
+                      </div>
+                      <Slider
+                        onChangeEnd={(state) => sliderChange(state, question.id)}
+                        color='green'
+                        min={question.slider.min}
+                        max={question.slider.max}
+                        defaultValue={question.slider.min}
+                        label={(value) => `${value}${question.slider?.label ?? ''}`}
+                        step={question.slider.step ?? 1}
+                        marks={[
+                          { value: 0.2 * (question.slider.max - question.slider.min), label: `${0.2 * (question.slider.max - question.slider.min)}${question.slider?.label ?? ''}` },
+                          { value: 0.5 * (question.slider.max - question.slider.min), label: `${0.5 * (question.slider.max - question.slider.min)}${question.slider?.label ?? ''}` },
+                          { value: 0.8 * (question.slider.max - question.slider.min), label: `${0.8 * (question.slider.max - question.slider.min)}${question.slider?.label ?? ''}` },
+                        ]}
+                        classNames={{
+                          root: classes.sliderRoot,
+                          label: classes.sliderLabel,
+                          markLabel: classes.sliderMarkLabel,
+                        }}
+                      />
+                    </div>
+                  )
+                }
+
+              })}
+              {area.title === 'MIESZKANIE' ?
+                <>
+                  <div>
+                    <div className={classes.center}>
+                      Ile osób mieszka w Twoim domu?
+                    </div>
+                    <Slider
+                      onChangeEnd={(state) => {
+                        setInhabitantsRef(state)
+                        updateScore(checkboxStateRef.current, sliderStateRef.current, state)
+                      }}
+                      color='green'
+                      min={1}
+                      max={11}
+                      defaultValue={1}
+                      marks={[
+                        { value: 3, label: '3' },
+                        { value: 6, label: '6' },
+                        { value: 9, label: '9' },
+                      ]}
+                      classNames={{
+                        root: classes.sliderRoot,
+                        label: classes.sliderLabel,
+                        markLabel: classes.sliderMarkLabel,
+                      }}
+                    />
+                  </div>
+                </> :
+                null}
+            </>
           </div>
         );
       })}
 
-      <Box
-        sx={(theme) => ({
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        })}
-      >
-        <Button>
+      <Box className={classes.buttonBox}>
+        <Button
+          onClick={() => setOpened((o) => [!o[0], o[1]])}
+          classNames={{ root: classes.buttonRoot }}
+        >
           Zobacz wynik
         </Button>
       </Box>
 
-      <div className={classes.buttonWrapper}>
-        <button className={classes.button} onClick={() => setOpened((o) => [!o[0], o[1]])}>Zobacz wynik</button>
-      </div>
-
       <Collapse in={opened[0]} transitionDuration={400}>
-        <div className={classes.rectangle2}>
-          {renderResult(total)}
+        <div className={cx(classes.rectangle, classes.results)}>
+          {renderResult(points)}
         </div>
 
-        <div className={classes.buttonWrapper}>
-          <button className={classes.button} onClick={() => setOpened((o) => [o[0], !o[1]])}>Zobacz szczegóły</button>
-        </div>
+        <Box className={classes.buttonBox}>
+          <Button
+            onClick={() => setOpened((o) => [o[0], !o[1]])}
+            classNames={{ root: classes.buttonRoot }}
+          >
+            Zobacz szczegóły
+          </Button>
+        </Box>
 
         <Collapse in={opened[1]} transitionDuration={400}>
-          <div className={classes.rectangle2}>
+          <div className={cx(classes.rectangle, classes.results)}>
             {resultsList.map((result, index, results) => {
               return (
                 <div key={result.boundary}>

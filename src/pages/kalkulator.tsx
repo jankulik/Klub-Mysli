@@ -10,14 +10,6 @@ export default function Kalkulator() {
     <Layout>
       <div className={classes.wrapper}>
         <div className={classes.flexContainer}>
-
-          <div className={classes.rectangle} style={{ textAlign: 'center' }}>
-            <div>
-              <h1 style={{ lineHeight: '2rem' }}>Czy wystarczy nam Ziemi? Kalkulator śladu ekologicznego</h1>
-              <p><br />Wybierz wszystkie odpowiedzi, które są najbliższe Twojemu stylowi życia</p>
-            </div>
-          </div>
-
           <Questions />
         </div>
       </div>

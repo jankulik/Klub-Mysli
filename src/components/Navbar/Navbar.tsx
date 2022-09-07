@@ -6,9 +6,9 @@ import NavItem from '../NavItem/NavItem';
 import Sidebar from '../Sidebar/Sidebar';
 import { useStyles } from './Navbar.styles';
 
-interface sizeType {
-  width: number | undefined;
-  height: number | undefined;
+type sizeType = {
+  width?: number;
+  height?: number;
 }
 
 const menuList = [
@@ -51,7 +51,7 @@ export default function Navbar() {
   const size: sizeType = useWindowSize();
 
   const generateMenu = () => {
-    if (size?.width && size.width < 768) {
+    if (size?.width && size.width < 992) {
       return (
         <div className={cx(classes.menuList, { [classes.active]: navActive === true })}>
           <Sidebar links={menuList} />

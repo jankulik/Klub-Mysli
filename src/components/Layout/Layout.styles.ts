@@ -45,7 +45,11 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     float: 'right',
   },
   
-  link: {
+  iconFacebook: {
+    marginRight: '2vw',
+  },
+
+  iconYoutube: {
     marginRight: '0.9vw',
   },
 }));

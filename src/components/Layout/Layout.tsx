@@ -30,10 +30,10 @@ export default function Layout({ children }: { children: any }) {
         </span>
         <div className={classes.footerIcon}>
           <Link href={'https://www.facebook.com/klubmyslieko'}>
-            <a className={classes.link}><IconBrandFacebook size={30} stroke={1.1} color='white' /></a>
+            <a className={classes.iconFacebook}><IconBrandFacebook size={30} stroke={1.1} color='white' /></a>
           </Link>
           <Link href={'https://www.youtube.com/channel/UCzDlbkITa9cQqW9bwRi4iOA'}>
-            <a className={classes.link}><IconBrandYoutube size={30} stroke={1.1} color='white' /></a>
+            <a className={classes.iconYoutube}><IconBrandYoutube size={30} stroke={1.1} color='white' /></a>
           </Link>
         </div>
       </div>

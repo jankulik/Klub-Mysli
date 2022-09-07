@@ -5,13 +5,23 @@ import Link from "next/link";
 import { useStyles } from "./Sidebar.styles";
 
 interface linksProps {
-  links: { label: string; link?: string; links?: { label: string; link: string }[] }[];
+  links: {
+    label: string;
+    link?: string;
+    links?: {
+      label: string;
+      link: string
+    }[]
+  }[];
 }
 
 interface linkProps {
   label: string;
   link?: string;
-  links?: { label: string; link: string }[];
+  links?: {
+    label: string;
+    link: string
+  }[];
 }
 
 export function LinksGroup({ label, link, links }: linkProps) {

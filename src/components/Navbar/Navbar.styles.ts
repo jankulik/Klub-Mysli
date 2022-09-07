@@ -18,7 +18,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   menuBar: {
     marginRight: '0.6rem',
 
-    [`@media (min-width: ${theme.breakpoints.sm}px)`]: {
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       display: 'none',
     },
   },
@@ -40,15 +40,15 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     display: 'flex',
     flexDirection: 'column',
     position: 'fixed',
-    top: '3.5rem',
+    top: '3.4rem',
     width: '288px',
     right: '-288px',
     padding: '24px 16px',
     transition: 'all 0.2s',
-    minHeight: 'calc(100vh - 3.5rem)',
+    minHeight: 'calc(100vh - 3.4rem)',
     backgroundColor: 'white',
 
-    [`@media (min-width: ${theme.breakpoints.sm}px)`]: {
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       position: 'unset',
       flexDirection: 'row',
       minHeight: 'fit-content',

@@ -7,32 +7,17 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: '-120px',
+    flexDirection: 'column',
     rowGap: '20px',
   },
   
-  rectangle: {
-    height: 'fit-content',
-    width: '100vw',
-    padding: '2rem 2rem',
-    background: '#018032',
-    boxShadow: '0px 0px 0.4rem black',
-    color: 'white',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '0.4rem',
-    margin: '10px 0 10px',
-  },
-  
   flexContainer: {
-    padding: '10rem 6vw 0rem',
+    padding: '2rem 3vw 0rem',
     display: 'flex',
     flexDirection: 'column',
 
     [`& > div`]: {
       width: '100%',
-      // textAlign: 'left',
       lineHeight: '1.5rem',
       fontSize: '1rem',
     },
