@@ -5,6 +5,9 @@ import { Burger } from '@mantine/core';
 import NavItem from '../NavItem/NavItem';
 import Sidebar from '../Sidebar/Sidebar';
 import { useStyles } from './Navbar.styles';
+import Logo from '../Logo'
+import { useMediaQuery } from "@mantine/hooks";
+
 
 type sizeType = {
   width?: number;
@@ -44,7 +47,8 @@ function useWindowSize(): sizeType {
 }
 
 export default function Navbar() {
-  const { classes, cx } = useStyles();
+  const { classes, cx, theme } = useStyles();
+  const isSmallScreen = useMediaQuery(theme.fn.smallerThan("sm").split("@media ")[1]);
 
   const [navActive, setNavActive] = useState(false)
   const [opened, setOpened] = useState(false)
@@ -73,18 +77,13 @@ export default function Navbar() {
   return (
     <header className={classes.header}>
       <nav className={classes.navbar}>
-        <Link href={'/'}>
-          <div className={classes.logo}>
-            <Image
-              alt='Logo'
-              src='/images/logo.jpg'
-              width='100%'
-              height='37.15%'
-              layout='responsive'
-              objectFit='contain'
-              priority={true}
+        <Link href={'/'} passHref>
+          <a className={classes.logo}>
+            <Logo
+              type={isSmallScreen ? "logo-only" : "logo-with-text"}
+              size={50}
             />
-          </div>
+          </a>
         </Link>
 
         <div className={classes.menuBar}>

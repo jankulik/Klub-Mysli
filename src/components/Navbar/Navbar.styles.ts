@@ -24,16 +24,19 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   },
 
   logo: {
-    marginLeft: '0.6rem',
-    width: '9.42rem',
-    height: '3.5rem',
-    maxWidth: '9.42rem',
-    maxHeight: '3.5rem',
-    position: 'relative',
+    // marginLeft: '0.6rem',
+    // width: '9.42rem',
+    // height: '3.5rem',
+    // maxWidth: '9.42rem',
+    // maxHeight: '3.5rem',
+    // position: 'relative',
 
-    '&:hover': {
-      cursor: 'pointer',
-    },
+    // '&:hover': {
+    //   cursor: 'pointer',
+    // },
+    display: 'flex',
+    alignItems: 'center',
+    marginLeft: '5px',
   },
 
   menuList: {

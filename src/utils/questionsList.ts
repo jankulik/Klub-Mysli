@@ -36,7 +36,7 @@ export const questionsList: questionsListType[] = [
     questions: [
       { id: 6, content: 'Robiąc zakupy kupujesz świeże produkty pochodzące z Twojego regionu', value: 2 },
       { id: 7, content: 'Świadomie szukasz produktów świeżych i lokalnych, choć nie zawsze ci się to udaje', value: 7 },
-      { id: 8, content: 'Nie zwracasz uwagi na to, jakie produkty kupujesz (skąd pochodzą i jak są przetworzone', value: 25 },
+      { id: 8, content: 'Nie zwracasz uwagi na to, jakie produkty kupujesz (skąd pochodzą i jak są przetworzone)', value: 25 },
       { id: 9, content: 'Jesz mięso codziennie', value: 85 },
       { id: 10, content: 'W twojej diecie przeważają produkty bezmięsne', value: 30 },
       { id: 11, content: 'Jesteś wegetarianinem', value: 10 },

@@ -236,6 +236,17 @@ export default function Questions() {
       <Collapse in={opened[0]} transitionDuration={400}>
         <div className={cx(classes.rectangle, classes.results)}>
           {renderResult(points)}
+
+          {points !== 0 ?
+            <>
+              <br />
+              <div className={classes.center}>
+                <h2>Co możesz zmienić?</h2>
+              </div>
+              <br />
+              Poniżej znajdziesz Twoje nawyki, które pozostawiają najwyższy ślad ekologiczny. Rezygnując z nich bezpośrednio przyczynisz się do poprawy kondycji naszej planety.
+            </> :
+            null}
         </div>
 
         <Box className={classes.buttonBox}>
