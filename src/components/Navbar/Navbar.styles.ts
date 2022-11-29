@@ -3,7 +3,7 @@ import { createStyles } from '@mantine/core';
 export const useStyles = createStyles((theme, _params, getRef) => ({
   header: {
     position: 'sticky',
-    zIndex: 30,
+    zIndex: 99,
     top: '0',
   },
 
@@ -66,5 +66,4 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   active: {
     right: 0,
   },
-
 }));
