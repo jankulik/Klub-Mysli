@@ -23,7 +23,7 @@ export default function Global() {
         'a': {
           color: 'inherit',
           textDecoration: 'none',
-        }
+        },
       })}
     />
   );

@@ -5,6 +5,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     position: 'sticky',
     zIndex: 99,
     top: '0',
+    borderBottom: `1px solid ${theme.colors.gray[3]}`,
   },
 
   navbar: {

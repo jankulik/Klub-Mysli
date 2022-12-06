@@ -35,25 +35,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     },
 
     [`& a:hover`]: {
-      backgroundColor: 'rgba(0, 150, 0, 0.05)',
-    },
-  },
-
-  highlight: {
-    background: 'rgba(0, 0, 0, 0)',
-    color: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 'max-content',
-    height: 'max-content',
-    padding: '7px',
-    borderRadius: '3px',
-    overflow: 'visible',
-    position: 'relative',
-
-    '&:hover': {
-      background: 'rgba(0, 150, 0, 0.05)',
-      cursor: 'pointer',
+      backgroundColor: theme.colors.brand[5],
     },
   },
 
@@ -61,5 +43,17 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     color: 'black',
     fontSize: '1rem',
     position: 'relative',
+    alignItems: 'center',
+    justifyContent: 'center',
+    // width: 'max-content',
+    // height: 'max-content',
+    padding: '4px 7px',
+    borderRadius: '3px',
+    // overflow: 'visible',
+
+    '&:hover': {
+      background: theme.colors.brand[5],
+      cursor: 'pointer',
+    },
   },
 }));

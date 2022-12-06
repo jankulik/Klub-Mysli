@@ -24,8 +24,8 @@ export default function NavItem({ links }: linksProps) {
       })
 
       return (
-        <div className={classes.dropdown} key={link.label}>
-          <div className={cx(classes.highlight, classes.link)}>
+        <div key={link.label} className={classes.dropdown}>
+          <div className={classes.link}>
             {link.label}
             <>&nbsp;</>
             <IconChevronDown size={14} stroke={2.5} />
@@ -38,10 +38,10 @@ export default function NavItem({ links }: linksProps) {
     }
 
     return (
-      <div key={link.label}>
+      <div key={link.label} className={classes.link}>
         {link.link &&
-          <Link href={link.link}>
-            <a className={cx(classes.highlight, classes.link)}>{link.label}</a>
+          <Link href={link.link} passHref>
+            <a>{link.label}</a>
           </Link>
         }
       </div>

@@ -10,7 +10,7 @@ export default function App(props: AppProps) {
     <>
       <Head>
         <title>Page title</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
       </Head>
 
       <MantineProvider
@@ -20,6 +20,9 @@ export default function App(props: AppProps) {
           colorScheme: 'light',
           cursorType: 'pointer',
           activeStyles: { transform: 'scale(0.98)' },
+          colors: {
+            brand: ['#D2DAD1', '#A8BFA4', '#018032', '#56B047', '#82BA41', '#f0f5eb', '#3A4638', '#30362F', '#272A27', '#20211F'],            
+          },
         }}
       >
         <Global />

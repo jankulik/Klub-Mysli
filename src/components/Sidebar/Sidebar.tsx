@@ -52,7 +52,7 @@ export function LinksGroup({ label, link, links }: linkProps) {
                 size={14}
                 stroke={2.5}
                 style={{
-                  transform: opened ? `rotate(90deg)` : "none",
+                  transform: opened ? `rotate(90deg)` : 'none',
                 }}
               />
             </> :
