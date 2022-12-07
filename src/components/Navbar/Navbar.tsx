@@ -1,64 +1,43 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Burger } from '@mantine/core';
 import NavItem from '../NavItem/NavItem';
 import Sidebar from '../Sidebar/Sidebar';
 import { useStyles } from './Navbar.styles';
-import Logo from '../Logo'
-import { useMediaQuery } from "@mantine/hooks";
-
-
-type sizeType = {
-  width?: number;
-  height?: number;
-}
+import Logo from '../Logo';
+import { useMediaQuery, useClickOutside, useDisclosure } from '@mantine/hooks';
+import { IconHome, IconUser, IconUsers, IconHomeEco, IconNotebook, IconMail, IconCalendarTime } from '@tabler/icons';
 
 const menuList = [
-  { label: 'Strona Główna', link: '/' },
-  { label: 'O Nas', link: '/o-nas' },
-  { label: 'Spotkania', links: [{ label: 'Zapowiedzi', link: '/zapowiedzi' }, { label: 'Archiwum', link: '/archiwum' }] },
-  { label: 'Warsztaty', link: '/warsztaty' },
-  { label: 'Edukacja', links: [{ label: 'Ekologia', link: '/ekologia' }, { label: 'Ekopsychologia', link: '/ekopsychologia' }, { label: 'Kalkulator Śladu Ekologicznego', link: '/kalkulator' }] },
-  { label: 'Ośrodek Źródło', link: '/osrodek-zrodlo' },
-  { label: 'Kontakt', link: '/kontakt' }
+  { icon: IconHome, label: 'Strona Główna', link: '/' },
+  { icon: IconUser, label: 'O Nas', link: '/o-nas' },
+  { icon: IconUsers, label: 'Spotkania', links: [{ label: 'Zapowiedzi', link: '/zapowiedzi' }, { label: 'Archiwum', link: '/archiwum' }] },
+  { icon: IconCalendarTime, label: 'Warsztaty', link: '/warsztaty' },
+  { icon: IconNotebook, label: 'Edukacja', links: [{ label: 'Ekologia', link: '/ekologia' }, { label: 'Ekopsychologia', link: '/ekopsychologia' }, { label: 'Kalkulator Śladu Ekologicznego', link: '/kalkulator' }] },
+  { icon: IconHomeEco, label: 'Ośrodek Źródło', link: '/osrodek-zrodlo' },
+  { icon: IconMail, label: 'Kontakt', link: '/kontakt' }
 ]
-
-function useWindowSize(): sizeType {
-  const [windowSize, setWindowSize] = useState<sizeType>({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-  return windowSize;
-}
 
 export default function Navbar() {
   const { classes, cx, theme } = useStyles();
-  const isSmallScreen = useMediaQuery(theme.fn.smallerThan("sm").split("@media ")[1]);
 
-  const [navActive, setNavActive] = useState(false)
-  const [opened, setOpened] = useState(false)
-  const size: sizeType = useWindowSize();
+  const isSmallScreen = useMediaQuery(theme.fn.smallerThan('md').split('@media ')[1]);
+  const [opened, { close, toggle }] = useDisclosure(false);
+  const [sidebarRef, setSidebarRef] = useState<HTMLElement | null>(null);
+  const [burgerRef, setBurgerRef] = useState<HTMLElement | null>(null);
+  useClickOutside(() => close(), null, [sidebarRef!, burgerRef!]);
 
   const generateMenu = () => {
-    if (size?.width && size.width < 992) {
+    if (isSmallScreen) {
       return (
-        <div className={cx(classes.menuList, { [classes.active]: navActive === true })}>
-          <Sidebar links={menuList} />
+        <div
+          ref={r => setSidebarRef(r)}
+          className={cx(classes.menuList, { [classes.active]: opened === true })}
+        >
+          <Sidebar
+            handleClick={close}
+            links={menuList}
+          />
         </div>
       )
     }
@@ -66,7 +45,7 @@ export default function Navbar() {
     return (
       <div className={classes.menuList}>
         {menuList.map((menu) => (
-          <div onClick={() => { setNavActive(false) }} key={menu.label}>
+          <div onClick={close} key={menu.label}>
             <NavItem links={[{ ...menu }]} />
           </div>
         ))}
@@ -80,23 +59,21 @@ export default function Navbar() {
         <Link href={'/'} passHref>
           <a className={classes.logo}>
             <Logo
-              type={isSmallScreen ? "logo-only" : "logo-with-text"}
+              type={isSmallScreen ? 'logo-only' : 'logo-with-text'}
               size={50}
             />
           </a>
         </Link>
 
-        <div className={classes.menuBar}>
+        <div className={classes.burger}>
           <Burger
+            ref={r => setBurgerRef(r)}
             opened={opened}
-            onClick={() => {
-              setOpened((o) => !o)
-              setNavActive(!navActive)
-            }}
+            onClick={toggle}
           />
         </div>
 
-        <>{generateMenu()}</>
+        {generateMenu()}
       </nav>
     </header>
   )

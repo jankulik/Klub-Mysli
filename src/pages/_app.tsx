@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 import Global from '../styles/Global';
+import { IconBrand4chan } from '@tabler/icons';
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -23,6 +24,7 @@ export default function App(props: AppProps) {
           colors: {
             brand: ['#D2DAD1', '#A8BFA4', '#018032', '#56B047', '#82BA41', '#f0f5eb', '#3A4638', '#30362F', '#272A27', '#20211F'],            
           },
+          primaryColor: 'brand',
         }}
       >
         <Global />

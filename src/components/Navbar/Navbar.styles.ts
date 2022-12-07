@@ -10,14 +10,14 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
 
   navbar: {
     display: 'flex',
-    height: '3.5rem',
+    height: '56px',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: 'white',
   },
 
-  menuBar: {
-    marginRight: '0.6rem',
+  burger: {
+    marginRight: '10px',
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       display: 'none',
@@ -25,16 +25,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   },
 
   logo: {
-    // marginLeft: '0.6rem',
-    // width: '9.42rem',
-    // height: '3.5rem',
-    // maxWidth: '9.42rem',
-    // maxHeight: '3.5rem',
-    // position: 'relative',
-
-    // '&:hover': {
-    //   cursor: 'pointer',
-    // },
     display: 'flex',
     alignItems: 'center',
     marginLeft: '5px',
@@ -44,12 +34,12 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     display: 'flex',
     flexDirection: 'column',
     position: 'fixed',
-    top: '3.4rem',
+    top: '56px',
     width: '288px',
     right: '-288px',
-    padding: '24px 16px',
+    // padding: '24px 16px',
     transition: 'all 0.2s',
-    minHeight: 'calc(100vh - 3.4rem)',
+    minHeight: 'calc(100vh - 56px)',
     backgroundColor: 'white',
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
