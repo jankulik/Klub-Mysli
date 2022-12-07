@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { IconChevronDown } from '@tabler/icons';
-import { useStyles } from './NavItem.styles';
+import { useStyles } from './styles';
 
 interface linksProps {
   links: { label: string; link?: string; links?: { label: string; link: string }[] }[]

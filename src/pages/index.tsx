@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/Layout/Layout';
+import Layout from '../components/Layout';
 import { useStyles } from '../styles/Home.styles';
 
 export default function Home() {

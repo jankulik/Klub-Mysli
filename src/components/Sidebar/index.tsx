@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Group, Collapse, ThemeIcon } from '@mantine/core';
 import { IconChevronRight, TablerIcon } from '@tabler/icons';
 import Link from 'next/link';
-import { useStyles } from './Sidebar.styles';
+import { useStyles } from './styles';
 
 interface SidebarProps {
   handleClick(): void;

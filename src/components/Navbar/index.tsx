@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Burger } from '@mantine/core';
-import NavItem from '../NavItem/NavItem';
-import Sidebar from '../Sidebar/Sidebar';
-import { useStyles } from './Navbar.styles';
+import NavItem from '../NavItem';
+import Sidebar from '../Sidebar';
+import { useStyles } from './styles';
 import Logo from '../Logo';
 import { useMediaQuery, useClickOutside, useDisclosure } from '@mantine/hooks';
 import { IconHome, IconUser, IconUsers, IconHomeEco, IconNotebook, IconMail, IconCalendarTime } from '@tabler/icons';

@@ -1,6 +1,6 @@
 import { createStyles, Container, Group, ActionIcon, Title, Text, Button, Center } from '@mantine/core';
 import { IconBrandFacebook, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
-import { useStyles } from './Footer.styles';
+import { useStyles } from './styles';
 import Link from 'next/link';
 
 export default function Footer() {

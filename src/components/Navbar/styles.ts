@@ -40,9 +40,11 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     transition: 'all 0.2s',
     minHeight: '100vh',
     backgroundColor: 'white',
+    borderLeft: `1px solid ${theme.colors.gray[3]}`,
     zIndex: -1,
-
+    
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
+      borderLeft: 'none',
       position: 'unset',
       flexDirection: 'row',
       minHeight: 'fit-content',

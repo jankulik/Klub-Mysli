@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Checkbox, Slider, Collapse, NumberInput, Button, Box } from '@mantine/core';
 import { questionsList, resultsList } from '../../utils/questionsList';
-import { useStyles } from './Questions.styles';
+import { useStyles } from './styles';
 
 export default function Questions() {
   const { classes, cx } = useStyles();

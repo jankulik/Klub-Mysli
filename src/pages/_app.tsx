@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
-import Global from '../styles/Global';
 import { RouterTransition } from '../components/RouterTransition';
 
 export default function App(props: AppProps) {
@@ -22,12 +21,23 @@ export default function App(props: AppProps) {
           cursorType: 'pointer',
           activeStyles: { transform: 'scale(0.98)' },
           colors: {
-            brand: ['#D2DAD1', '#A8BFA4', '#018032', '#56B047', '#82BA41', '#f0f5eb', '#3A4638', '#30362F', '#272A27', '#20211F'],            
+            brand: ['#D2DAD1', '#A8BFA4', '#018032', '#56B047', '#82BA41', '#f0f5eb', '#3A4638', '#30362F', '#272A27', '#20211F'],
           },
           primaryColor: 'brand',
+          globalStyles: (theme) => ({
+            '*, *::before, *::after': {
+              boxSizing: 'border-box',
+            },
+
+            body: {
+              ...theme.fn.fontStyles(),
+              backgroundColor: theme.white,
+              color: theme.black,
+              lineHeight: theme.lineHeight,
+            },
+          }),
         }}
       >
-        <Global />
         <RouterTransition />
         <Component {...pageProps} />
       </MantineProvider>
