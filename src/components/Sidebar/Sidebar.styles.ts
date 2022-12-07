@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 
 export const useStyles = createStyles((theme, _params, getRef) => ({
   menu: {
-    marginTop: '16px',
+    marginTop: '72px',
   },
 
   control: {

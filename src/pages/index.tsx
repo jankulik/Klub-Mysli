@@ -1,14 +1,18 @@
-import React from 'react'
-import NavItem from '../components/NavItem/NavItem';
+import React from 'react';
+import Head from 'next/head';
 import Layout from '../components/Layout/Layout';
-import { useStyles } from '../styles/Home.styles'
+import { useStyles } from '../styles/Home.styles';
 
 export default function Home() {
   const { classes, cx } = useStyles();
 
   return (
-    <Layout>
-      {/* <div className={classes.container}>
+    <>
+      <Head>
+        <title>Klub Myśli Ekologicznej</title>
+      </Head>
+      <Layout>
+        {/* <div className={classes.container}>
 
         <div className={classes.wrapper}>
           <div className={classes.rectangle}>
@@ -24,6 +28,7 @@ export default function Home() {
           Lorem Ipsum
         </p>
       </div> */}
-    </Layout>
+      </Layout>
+    </>
   )
 }

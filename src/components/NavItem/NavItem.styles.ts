@@ -20,7 +20,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     width: '10rem',
     borderRadius: '3px',
     boxShadow: '0px 0px 0.2rem 0px rgba(0, 0, 0, 0.4)',
-    zIndex: 1,
     marginTop: '0.3rem',
     marginLeft: 'calc(50% - 5rem)',
     visibility: 'hidden',

@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 import Global from '../styles/Global';
-import { IconBrand4chan } from '@tabler/icons';
+import { RouterTransition } from '../components/RouterTransition';
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -28,6 +28,7 @@ export default function App(props: AppProps) {
         }}
       >
         <Global />
+        <RouterTransition />
         <Component {...pageProps} />
       </MantineProvider>
     </>

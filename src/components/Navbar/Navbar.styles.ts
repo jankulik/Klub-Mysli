@@ -3,17 +3,17 @@ import { createStyles } from '@mantine/core';
 export const useStyles = createStyles((theme, _params, getRef) => ({
   header: {
     position: 'sticky',
-    zIndex: 99,
     top: '0',
-    borderBottom: `1px solid ${theme.colors.gray[3]}`,
+    zIndex: 99,
   },
-
+  
   navbar: {
     display: 'flex',
     height: '56px',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: 'white',
+    borderBottom: `1px solid ${theme.colors.gray[3]}`,
   },
 
   burger: {
@@ -34,13 +34,13 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     display: 'flex',
     flexDirection: 'column',
     position: 'fixed',
-    top: '56px',
+    top: '0px',
     width: '288px',
     right: '-288px',
-    // padding: '24px 16px',
     transition: 'all 0.2s',
-    minHeight: 'calc(100vh - 56px)',
+    minHeight: '100vh',
     backgroundColor: 'white',
+    zIndex: -1,
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       position: 'unset',
@@ -51,6 +51,8 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
       paddingTop: '1px',
       paddingBottom: '1px',
       alignItems: 'center',
+      marginRight: '16px',
+      zIndex: 99,
     },
   },
 

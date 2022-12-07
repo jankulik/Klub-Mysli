@@ -7,14 +7,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     minHeight: "100vh",
   },
 
-  // navbar: {
-  //   display: 'flex',
-  //   height: '3.5rem',
-  //   justifyContent: 'space-between',
-  //   alignItems: 'center',
-  //   backgroundColor: 'white',
-  // },
-
   bgWrapper: {
     position: 'fixed',
     height: '100vh',
