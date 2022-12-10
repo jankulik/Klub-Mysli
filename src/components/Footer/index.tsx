@@ -1,5 +1,5 @@
-import { createStyles, Container, Group, ActionIcon, Title, Text, Button, Center } from '@mantine/core';
-import { IconBrandFacebook, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { Container, Group, Text, Button, Center } from '@mantine/core';
+import { IconBrandFacebook, IconBrandYoutube } from '@tabler/icons';
 import { useStyles } from './styles';
 import Link from 'next/link';
 

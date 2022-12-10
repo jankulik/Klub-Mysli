@@ -21,7 +21,7 @@ export default function App(props: AppProps) {
           cursorType: 'pointer',
           activeStyles: { transform: 'scale(0.98)' },
           colors: {
-            brand: ['#D2DAD1', '#A8BFA4', '#018032', '#56B047', '#82BA41', '#f0f5eb', '#3A4638', '#30362F', '#272A27', '#20211F'],
+            brand: ['#D2DAD1', '#A8BFA4', '#99ffff', '#99ffff', '#99ffff', '#666666', '#82BA41', '#99ffff', '#99ffff', '#99ffff'],
           },
           primaryColor: 'brand',
           globalStyles: (theme) => ({
@@ -34,6 +34,11 @@ export default function App(props: AppProps) {
               backgroundColor: theme.white,
               color: theme.black,
               lineHeight: theme.lineHeight,
+            },
+
+            'a': {
+              color: 'inherit',
+              textDecoration: 'none',
             },
           }),
         }}

@@ -59,7 +59,7 @@ export default function Navbar() {
         <Link href={'/'} passHref>
           <a className={classes.logo}>
             <Logo
-              type={isSmallScreen ? 'logo-only' : 'logo-with-text'}
+              type={'logo-with-text'}
               size={50}
             />
           </a>

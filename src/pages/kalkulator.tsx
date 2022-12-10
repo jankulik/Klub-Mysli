@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import Questions from '../components/Questions';
 import { useStyles } from '../styles/Kalkulator.styles';
+import Head from 'next/head';
 
 export default function Kalkulator() {
-  const { classes, cx } = useStyles();
+  const { classes } = useStyles();
 
   return (
-    <Layout>
-      <div className={classes.wrapper}>
-        <div className={classes.flexContainer}>
-          <Questions />
+    <>
+      <Head>
+        <title>Kalkulator Śladu Ekologicznego</title>
+      </Head>
+      <Layout>
+        <div className={classes.wrapper}>
+          <div className={classes.flexContainer}>
+            <Questions />
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   )
 }
