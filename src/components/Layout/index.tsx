@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import Navbar from '../Navbar';
-import { IconBrandFacebook, IconBrandYoutube } from '@tabler/icons';
-import Link from 'next/link';
 import { useStyles } from './styles';
 import Footer from '../Footer';
 
