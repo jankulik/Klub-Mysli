@@ -10,7 +10,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     borderRadius: '7px',
-    boxShadow: `0px 0px 8px 0px ${theme.colors.gray[4]}`,
+    // boxShadow: `0px 0px 8px 0px ${theme.colors.gray[4]}`,
 
     [theme.fn.smallerThan('sm')]: {
       width: '94vw',
@@ -24,7 +24,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     padding: '0px 0px 0px 20px',
 
     [theme.fn.smallerThan('sm')]: {            
-      padding: '20px 0px 20px 20px',
+      padding: '20px 0px',
     },
   },
 

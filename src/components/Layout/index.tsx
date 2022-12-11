@@ -9,17 +9,7 @@ export default function Layout({ children }: { children: any }) {
   return (
     <div className={classes.root}>
       <Navbar />
-
-      {/* <div className={classes.bgWrapper}>
-        <Image
-          alt='Liść'
-          src='/images/lisc1.jpg'
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </div> */}
-
+      
       <div className={classes.wrapper}>
         {children}
       </div>

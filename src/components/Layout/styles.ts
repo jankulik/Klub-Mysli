@@ -7,14 +7,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     minHeight: "100vh",
   },
 
-  bgWrapper: {
-    position: 'fixed',
-    height: '100vh',
-    width: '100vw',
-    overflow: 'hidden',
-    zIndex: -1,
-  },
-
   wrapper: {
     flex: 1,
   },
