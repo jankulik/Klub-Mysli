@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Checkbox, CheckboxProps, Text } from '@mantine/core';
 import { IconLeaf } from '@tabler/icons';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const CheckboxIcon: CheckboxProps['icon'] = ({ indeterminate, className }) =>
   indeterminate ? <IconLeaf className={className} /> : <IconLeaf className={className} />

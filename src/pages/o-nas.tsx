@@ -1,7 +1,7 @@
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 import Head from 'next/head';
-import AboutCard from '../../components/AboutCard';
-import { useStyles } from './styles';
+import AboutCard from '../components/AboutCard';
+import { useStyles } from '../styles/o-nas.styles';
 import Link from 'next/link';
 import { Button } from '@mantine/core';
 
@@ -30,7 +30,11 @@ export default function ONas() {
             </AboutCard>
 
             <Link href="/statut2020.pdf" passHref>
-              <Button>
+              <Button
+                className={classes.control}
+                variant='white'
+                size='lg'
+              >
                 Zobacz statut
               </Button>
             </Link>

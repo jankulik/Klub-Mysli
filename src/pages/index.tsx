@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import { useStyles } from './styles';
+import { useStyles } from '../styles/home.styles';
 import { Button, Overlay, Title, Text, Container, ThemeIcon, List } from '@mantine/core';
 import Image from 'next/image';
 import { IconCheck } from '@tabler/icons';

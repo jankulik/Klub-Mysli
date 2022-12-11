@@ -1,6 +1,6 @@
-import Layout from '../../components/Layout';
-import Questions from '../../components/Questions';
-import { useStyles } from './styles';
+import Layout from '../components/Layout';
+import Questions from '../components/Questions';
+import { useStyles } from '../styles/kalkulator.styles';
 import Head from 'next/head';
 
 export default function Kalkulator() {

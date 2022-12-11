@@ -15,6 +15,16 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     },
   },
 
+  control: {
+    height: 42,
+    minWidth: '200px',
+    fontSize: theme.fontSizes.md,
+
+    [theme.fn.smallerThan('xs')]: {
+      width: '94vw',
+    },
+  },
+
   container: {
     padding: '20px 0px',
     display: 'flex',
