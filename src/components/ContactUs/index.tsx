@@ -8,7 +8,7 @@ import { showNotification, updateNotification } from '@mantine/notifications';
 import { IconCheck } from '@tabler/icons';
 
 export function ContactUs() {
-  const { classes } = useStyles();
+  const { classes, theme } = useStyles();
 
   const form = useForm({
     initialValues: {
@@ -40,7 +40,7 @@ export function ContactUs() {
         console.log(result.text);
         updateNotification({
           id: 'send-message',
-          color: 'teal',
+          color: theme.colors[theme.primaryColor][6],
           title: 'Wiadomość została wysłana',
           message: 'Odpowiemy tak szybko, jak to możliwe',
           icon: <IconCheck size={16} />,

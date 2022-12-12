@@ -25,11 +25,11 @@ export default function NavItem({ links }: linksProps) {
 
       return (
         <div key={link.label} className={classes.dropdown}>
-          <div className={classes.link}>
+          <a className={classes.link}>
             {link.label}
             <>&nbsp;</>
             <IconChevronDown size={14} stroke={2.5} />
-          </div>
+          </a>
           <div className={classes.dropdownContent}>
             {subItems}
           </div>
@@ -38,10 +38,12 @@ export default function NavItem({ links }: linksProps) {
     }
 
     return (
-      <div key={link.label} className={classes.link}>
+      <div key={link.label}>
         {link.link &&
           <Link href={link.link} passHref>
-            <a>{link.label}</a>
+            <a className={classes.link}>
+              {link.label}
+            </a>
           </Link>
         }
       </div>

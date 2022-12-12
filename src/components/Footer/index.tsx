@@ -11,7 +11,7 @@ export default function Footer() {
       <Container className={classes.inner}>
         <Group spacing={8}>
           <Text>
-            &copy; 2022 Klub Myśli Ekologicznej
+            &copy; 2023 Klub Myśli Ekologicznej
           </Text>
         </Group>
         <Group spacing={0} className={classes.links} position="right" noWrap>

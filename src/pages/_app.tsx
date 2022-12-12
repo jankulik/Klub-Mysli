@@ -22,7 +22,8 @@ export default function App(props: AppProps) {
           cursorType: 'pointer',
           activeStyles: { transform: 'scale(0.98)' },
           colors: {
-            brand: ['#D2DAD1', '#A8BFA4', '#99ffff', '#99ffff', '#99ffff', '#666666', '#82BA41', '#99ffff', '#99ffff', '#99ffff'],
+            // primary color: [6]
+            brand: ['#ebfbee', '#ff0000', '#ff0000', '#ff0000', '#69db7c', '#ff0000', '#40c057', '#37b24d', '#ff0000', '#ff0000'],
           },
           primaryColor: 'brand',
           globalStyles: (theme) => ({

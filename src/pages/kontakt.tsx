@@ -13,8 +13,10 @@ export default function Kontakt() {
       </Head>
 
       <Layout>
-        <div className={classes.wrapper}>
-          <ContactUs />
+        <div className={classes.parallax}>
+          <div className={classes.wrapper}>
+            <ContactUs />
+          </div>
         </div>
       </Layout>
     </>

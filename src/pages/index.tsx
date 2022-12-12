@@ -37,7 +37,7 @@ export default function Home() {
                 component='span'
                 inherit
                 variant='gradient'
-                gradient={{ from: theme.colors.brand[3], to: theme.colors.brand[4], deg: 45 }}
+                gradient={{ from: theme.colors[theme.primaryColor][4], to: theme.colors[theme.primaryColor][7], deg: 45 }}
               >
                 Ekologicznej
               </Text>

@@ -16,9 +16,11 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   },
 
   wrapper: {
-    padding: '20px 12px',
-    maxWidth: '1000px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    padding: '20px 0px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    rowGap: '20px',
   },
 }));

@@ -25,7 +25,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     },
   },
 
-  container: {
+  wrapper: {
     padding: '20px 0px',
     display: 'flex',
     justifyContent: 'center',

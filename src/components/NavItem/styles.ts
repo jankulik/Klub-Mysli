@@ -34,7 +34,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     },
 
     [`& a:hover`]: {
-      backgroundColor: theme.colors.brand[5],
+      backgroundColor: theme.colors.gray[1],
     },
   },
 
@@ -44,14 +44,11 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     position: 'relative',
     alignItems: 'center',
     justifyContent: 'center',
-    // width: 'max-content',
-    // height: 'max-content',
-    padding: '4px 7px',
+    padding: '7px',
     borderRadius: '3px',
-    // overflow: 'visible',
 
     '&:hover': {
-      background: theme.colors.brand[5],
+      background: theme.colors.gray[1],
       cursor: 'pointer',
     },
   },

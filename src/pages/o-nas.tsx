@@ -16,7 +16,7 @@ export default function ONas() {
 
       <Layout>
         <div className={classes.parallax}>
-          <div className={classes.container}>
+          <div className={classes.wrapper}>
             <AboutCard name='Piotr Skubała' imageUrl='/images/skubala.jpg'>
               Profesor nauk biologicznych na Wydziale Nauk Przyrodniczych Uniwersytetu Śląskiego. Ekolog, akarolog (zajmuje się ekologią i systematyką roztoczy Oribatida), autor 145 artykułów naukowych, 47 monografii lub rozdziałów w monografiach, 38 komunikatów naukowych oraz 135 artykułów popularnonaukowych. Etyk środowiskowy, edukator ekologiczny, działacz na rzecz ochrony przyrody; aktywista klimatyczny, lider Climate Reality Foundation Ala Gore’a, „ethic expert” w Komisji Europejskiej w Brukseli (program HORIZON 2020), członek komisji ds. GMO i GMM przy Ministrze Środowiska (2014-2019), stały współpracownik miesięczników AURA. Ochrona Środowiska i Dzikie Życie, współorganizator Festiwalu Kultury Ekologicznej „Zielono Mi”, organizator i współprowadzący spotkania Klubu Myśli Ekologicznej.
             </AboutCard>

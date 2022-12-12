@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { startNavigationProgress, completeNavigationProgress, NavigationProgress } from '@mantine/nprogress';
+import { useMantineTheme } from '@mantine/core';
 
 export function RouterTransition() {
   const router = useRouter();
+  const theme = useMantineTheme();
 
   useEffect(() => {
     const handleStart = (url: string) => url !== router.asPath && startNavigationProgress();
@@ -20,5 +22,5 @@ export function RouterTransition() {
     };
   }, [router.asPath]);
 
-  return <NavigationProgress color={'blue'} autoReset={true} />;
+  return <NavigationProgress color={theme.colors.brand[6]} autoReset={true} />;
 }

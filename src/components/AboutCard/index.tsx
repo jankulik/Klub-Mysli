@@ -2,7 +2,7 @@ import { useStyles } from './styles';
 import { Title, Space, Image } from '@mantine/core';
 
 interface AboutCardProps {
-  children: string;
+  children: any;
   name: string;
   imageUrl: string;
 }

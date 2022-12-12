@@ -32,7 +32,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     backgroundColor: "transparent",
 
     "&:hover": {
-      backgroundColor: theme.colors.brand[5],
+      backgroundColor: theme.colors.gray[1],
     },
   }
 }));

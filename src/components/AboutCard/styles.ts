@@ -24,7 +24,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     padding: '0px 0px 0px 20px',
 
     [theme.fn.smallerThan('sm')]: {            
-      padding: '20px 0px',
+      padding: '20px',
     },
   },
 
