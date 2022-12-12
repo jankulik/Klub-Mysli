@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
+import { NotificationsProvider } from '@mantine/notifications';
 import { RouterTransition } from '../components/RouterTransition';
 
 export default function App(props: AppProps) {
@@ -43,8 +44,10 @@ export default function App(props: AppProps) {
           }),
         }}
       >
-        <RouterTransition />
-        <Component {...pageProps} />
+        <NotificationsProvider>
+          <RouterTransition />
+          <Component {...pageProps} />
+        </NotificationsProvider>
       </MantineProvider>
     </>
   );

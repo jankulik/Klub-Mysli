@@ -11,7 +11,7 @@ export default function ONas() {
   return (
     <>
       <Head>
-        <title>Klub Myśli Ekologicznej</title>
+        <title>O Nas | Klub Myśli Ekologicznej</title>
       </Head>
 
       <Layout>
@@ -25,7 +25,7 @@ export default function ONas() {
               Doktor psychologii, trener rekomendowany przez Polskie Towarzystwo Psychologiczne (rekomendacja II st.). Od 30 lat zaangażowany w prowadzenie grup w ramach edukacji psychologicznej i ekologicznej. Specjalizuje się w prowadzeniu treningów interpersonalnych na procesie, grup w obszarze ekopsychologii i głębokiej ekologii. Jego misją jest towarzyszenie człowiekowi w procesie przekraczania oddzielenia od samego siebie, innych ludzi i przyrody. Autor książek dotyczących relacji człowiek – natura, w których łączy perspektywę psychologiczną, duchowa i ekologiczną, m.in. „Odkrywanie natury”, „Stąpając mocno po Ziemi”, czy „Człowiek wobec natury”. Członek redakcji miesięcznika „Dzikie Życie”; regularnie publikuje swoje eseje również w Gazecie Wyborczej. Laureat nagród: „Zielony Czek”, „Dobromir roku 2013” Ekologicznego Kongresu Gospodarczego, „Ekolaur 2019” Polskiej Izby Ekologii i Konkursu POP Science Festiwalu Nauki 2020. Zapalony rowerzysta i włóczykij; miłośnik dzikości i prostego życia poza głównym nurtem cywilizacji. Najwięcej o sobie i świecie nauczył się przebywając samotnie w dzikich miejscach oraz śpiąc w lesie, pod gołym niebem.
             </AboutCard>
 
-            <AboutCard name='Barbara Ewa Wojtaszek' imageUrl='/images/wojtaszek.jpg'>
+            <AboutCard name='Barbara Wojtaszek' imageUrl='/images/wojtaszek.jpg'>
               Kiedyś nauczycielka języków polskiego i angielskiego, dzisiaj edukatorka ekologiczna, absolwentka Szkoły Trenerów Meritum w Katowicach oraz Treningu dla Kobiet Trzymających Kręgi w Sex&Love School Karo Akabal, aktywistka Śląskiego Ruchu Klimatycznego. W CV ma także pełnienie funkcji prezeski zarządu Fundacji Szczęśliwi Bez Cukru w Warszawie i wieloletnią pracę wychowawczą z dziećmi i młodzieżą w ramach Związku Harcerstwa Polskiego. Fascynuje ją integrowanie obszarów umysł – ciało – emocje – duch. Praktykuje holistyczne podejście do życia łączące zdrowe jedzenie (dobre dla ludzi i dla planety), pracę z ciałem w duchu lowenowskiej przyjemności, pozwalanie sobie na wrażliwość i odczuwanie całego koła emocji oraz doświadczanie zarówno relaksu jak i dyskomfortu na łonie przyrody. Prowadzi fanpejdż Klimatyczna Kuchnia na Facebooku.
             </AboutCard>
 

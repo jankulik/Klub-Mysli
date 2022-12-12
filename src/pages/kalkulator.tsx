@@ -9,8 +9,9 @@ export default function Kalkulator() {
   return (
     <>
       <Head>
-        <title>Kalkulator Śladu Ekologicznego</title>
+        <title>Kalkulator Śladu Ekologicznego | Klub Myśli Ekologicznej</title>
       </Head>
+      
       <Layout>
         <div className={classes.wrapper}>
           <div className={classes.flexContainer}>
