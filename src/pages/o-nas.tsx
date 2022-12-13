@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import Head from 'next/head';
-import AboutCard from '../components/AboutCard';
+import AboutCard from '../components/PhotoCard';
 import { useStyles } from '../styles/o-nas.styles';
 import Link from 'next/link';
 import { Button } from '@mantine/core';

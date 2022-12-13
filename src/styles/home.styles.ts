@@ -53,6 +53,8 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
+    textAlign: 'center',
+    color: 'white',
 
     [theme.fn.smallerThan('xs')]: {
       fontSize: 28,

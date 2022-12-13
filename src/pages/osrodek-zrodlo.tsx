@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 import Head from 'next/head';
-import AboutCard from '../components/AboutCard';
+import AboutCard from '../components/PhotoCard';
 import { Text, Space, Button, Center } from '@mantine/core';
 import { useStyles } from '../styles/osrodek-zrodlo.styles';
 import Link from 'next/link';
