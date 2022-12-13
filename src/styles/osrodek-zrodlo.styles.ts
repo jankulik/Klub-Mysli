@@ -7,7 +7,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundImage: 'url(images/fern.jpg)',
-    height: 'calc(100vh - 140px)',
+    height: '100%',
 
     [`@media only screen and (max-device-width: ${theme.breakpoints.md}px)`]: {
       backgroundAttachment: 'scroll',
@@ -22,5 +22,13 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     alignItems: 'center',
     flexDirection: 'column',
     rowGap: '20px',
+  },
+
+  map: {    
+    [`& iframe`]: {
+      maxWidth: '1000px',
+      borderRadius: '7px',
+      width: '94vw',    
+    },
   },
 }));
