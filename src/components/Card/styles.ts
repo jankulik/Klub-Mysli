@@ -29,7 +29,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   },
 
   content: {
-    padding: '8px 15px 15px 15px',
+    padding: '15px',
     textAlign: 'center',
   },
 
@@ -40,6 +40,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
       maxWidth: '960px',
       maxHeight: '540px',
       borderRadius: '7px',
+      marginBottom: '-10px',
     },
   },
 }));
