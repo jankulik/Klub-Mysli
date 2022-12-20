@@ -2,14 +2,14 @@ import { useStyles } from './styles';
 import { Button, Title } from '@mantine/core';
 import Link from 'next/link';
 
-interface AboutCardProps {
+interface CardProps {
   children: any;
   title: string;
   documentUrl?: string;
   videoId?: string;
 }
 
-export default function AboutCard({ children, title, documentUrl, videoId }: AboutCardProps) {
+export default function Card({ children, title, documentUrl, videoId }: CardProps) {
   const { classes } = useStyles();
 
   return (

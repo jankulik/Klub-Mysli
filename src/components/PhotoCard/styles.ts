@@ -11,7 +11,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     alignItems: 'center',
     borderRadius: '7px',
     width: '94vw',
-    // boxShadow: `0px 0px 8px 0px ${theme.colors.gray[4]}`,
 
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',

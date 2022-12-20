@@ -1,0 +1,441 @@
+[
+  {
+    "title": "1. Magdalena Cielenga-Wiaterek",
+    "description": ["Magdalena Cielenga-Wiaterek – prowadząca bloga Zielenina"],
+    "topic": "Temat: „Jak się zdrowo odżywiać w dzisiejszym świecie?”",
+    "date": "17 stycznia 2012"
+  },
+  {
+    "title": "2. Jacek Bożek",
+    "description": ["Jacek Bożek – polski działacz na rzecz ochrony środowiska, założyciel i przewodniczący Klubu Gaja"],
+    "topic": "Temat: „Ekologia pomiędzy”",
+    "date": "21 luty 2012"
+  },
+  {
+    "title": "3. Dr Teresa Sikora",
+    "description": ["Dr Teresa Sikora – adiunkt w Zakładzie Psychologii Zdrowia i Jakości Życia Instytutu Psychologii Uniwersytetu Śląskiego w Katowicach"],
+    "topic": "Temat: Blaski i cienie „grypy dobrobytu” w ujęciu psychologa",
+    "date": "27 marca 2012"
+  },
+  {
+    "title": "4. Dr Tomasz Pietrzykowski",
+    "description": ["Dr Tomasz Pietrzykowski – prawnik, wojewoda śląski w latach 2005–2007"],
+    "topic": "Temat: „Dlaczego zwierzęta powinny mieć prawa?”",
+    "date": "22 maja 2012"
+  },
+  {
+    "title": "5. Prof. nadzw. dr hab. Katarzyna Lisowska",
+    "description": ["Prof. nadzw. dr hab. Katarzyna Lisowska – biolog molekularny, pracownik naukowy w Instytucie Onkologii w Gliwicach, działacz społeczny i dziennikarz obywatelski"],
+    "topic": "Temat: „Czy potrzebujemy żywności genetycznie modyfikowanej?”",
+    "date": "19 czerwca 2012"
+  },
+  {
+    "title": "6. Przemysław Bagiński",
+    "description": ["Przemysław Bagiński – student kierunku ochrona środowiska na Uniwersytecie Śląskim, polski freegan"],
+    "topic": "Temat: „Footprint 0,1 czyli o czym szumią kontenery”",
+    "date": "18 września 2012"
+  },
+  {
+    "title": "7. Cecylia Malik",
+    "description": ["Cecylia Malik – malarka, performerka, ekolożka"],
+    "topic": "Temat: „Po co artystka ekologom i po co artystce naukowiec ekolog”",
+    "date": "23 października 2012"
+  },
+  {
+    "title": "8. Zenon Kruczyński",
+    "description": ["Zenon Kruczyński – publicysta i aktywista ekologiczny"],
+    "topic": "Temat: „Dzikie ptaki to jedne z najpiękniejszych istot na Ziemi, są uosobieniem wolności. Nie zgadzam się na ich zabijanie. Niech Żyją!”",
+    "date": "28 listopada 2012"
+  },
+  {
+    "title": "9. Waldemar Osmałek",
+    "description": ["Waldemar Osmałek – aktywista Shark Project"],
+    "topic": "Temat: „Jeśli umrą rekiny – umrze morze. Shark Project w obronie rekinów”",
+    "date": "18 grudnia 2012"
+  },
+  {
+    "title": "10. Elżbieta Kawka",
+    "description": ["Elżbieta Kawka – edukatorka i aktywistka na rzecz zwierząt"],
+    "topic": "Temat: „O zwierzętach, dla zwierząt – moja przygoda z dziką Afryką”",
+    "date": "29 stycznia 2013"
+  },
+  {
+    "title": "11. Marcin Popkiewicz",
+    "description": ["Marcin Popkiewicz – fizyk, pisarz, przewodniczący polskiego oddziału ASPO (The Association for the Study of Peak Oil and Gas"],
+    "topic": "Temat: „Świat na rozdrożu”",
+    "date": "26 luty 2013"
+  },
+  {
+    "title": "12. dr Stanisław Grygierczyk",
+    "description": ["dr Stanisław Grygierczyk – koordynator ds. naukowych i środowiskowych w Parku Naukowo-Technologicznym Euro – Centrum"],
+    "topic": "Temat: „Budynki energooszczędne – nasza (najbliższa) przyszłość ”",
+    "date": "19 marca 2013"
+  },
+  {
+    "title": "13. Katowicka Kooperatywa Spożywcza",
+    "description": ["Katowicka Kooperatywa Spożywcza – grupa zapaleńców, wśród nich aktywiści, artyści, obrońcy przyrody, weganie. W trakcie spotkania pragną oni zaprezentować działalność ruchów kooperatywnych w Polsce i na świecie, zachęcić do przyłączenia się do kooperatywy spożywczej. „Pokażemy kim jesteśmy, w co wierzymy, co chcemy stworzyć. Wysłuchamy pomysłów i damy kilka swoich”"],
+    "topic": "Temat: „Miasto a wieś. Jak dobrze jeść? Kooperatywy spożywcze w dzisiejszym świecie”",
+    "date": "23 kwietnia 2013"
+  },
+  {
+    "title": "14. Prof. dr hab. Jan Popczyk",
+    "description": ["Prof. dr hab. Jan Popczyk – profesor zwyczajny Politechniki Śląskiej, znany w środowisku orędownik energetyki rozproszonej"],
+    "topic": "Temat: „Energetyka przyszłości (prosumencka) – szansa dla ludzi i przyrody”",
+    "date": "15 maja 2013"
+  },
+  {
+    "title": "15. Grzegorz Bożek",
+    "description": ["Grzegorz Bożek – ekolog, redaktor naczelny „Dzikiego Życia”"],
+    "topic": "Temat: „Głęboka ekologia w działaniu”",
+    "date": "11 czerwca 2013"
+  },
+  {
+    "title": "16. dr Jarosław Zajączkowski",
+    "description": ["dr Jarosław Zajączkowski – dr nauk weterynaryjnych"],
+    "topic": "Temat: „Ogrody zoologiczne – sens bytu”",
+    "date": "17 września 2013"
+  },
+  {
+    "title": "17. Anna Mularczyk-Meyer",
+    "description": ["Anna Mularczyk-Meyer – minimalistka, tłumaczka"],
+    "topic": "Temat: „Mieć mało znaczy być wolnym”",
+    "date": "29 października 2013"
+  },
+  {
+    "title": "18. Olga Tokarczuk",
+    "description": ["Olga Tokarczuk – powieściopisarka i eseistka"],
+    "topic": "Spotkanie autorskie",
+    "date": "28 listopada 2013"
+  },
+  {
+    "title": "19. Dariusz Gzyra",
+    "description": ["Dariusz Gzyra – prezes stowarzyszenia Empatia, pionier weganizmu w Polsce"],
+    "topic": "Temat: „O krzywdzie zwierząt”",
+    "date": "10 grudnia 2013"
+  },
+  {
+    "title": "20. ojciec Stanisław Jaromi",
+    "description": ["ojciec Stanisław Jaromi – franciszkanin, przewodniczący Ruchu Ekologicznego św. Franciszka z Asyżu"],
+    "topic": "Temat: „Ekologiczny wymiar chrześcijaństwa”",
+    "date": "7 stycznia 2014"
+  },
+  {
+    "title": "21. Izabela Jaglarz",
+    "description": ["Izabela Jaglarz – propagatorka probiotechnologii, współzałożycielka i wiceprezes Stowarzyszenia na Rzecz Ochrony Środowiska Naturalnego „EMEKO”"],
+    "topic": "Temat: „Od chemii do ekologii w rolnictwie: gleba, rośliny, zwierzęta. Mikrooorganizmy strażnicy życia”",
+    "date": "18 lutego 2014"
+  },
+  {
+    "title": "22. Jacek Zachara",
+    "description": ["Jacek Zachara – prezes Stowarzyszenia „Olszówka”, aktywista społeczny"],
+    "topic": "Temat: „Przyroda wokół mojego domu”",
+    "date": "11 marca 2014"
+  },
+  {
+    "title": "23. Dr Jerzy Parusel",
+    "description": ["Dr Jerzy Parusel – dyrektor Centrum Dziedzictwa Przyrody Górnego Śląska"],
+    "topic": "Temat: „Małe rzeczki w wielkim mieście – w obronie lokalnej przyrody”",
+    "date": "1 kwietnia 2014"
+  },
+  {
+    "title": "24. prof. dr hab. Piotr Tryjanowski",
+    "description": ["prof. dr hab. Piotr Tryjanowski – ornitolog, ekolog, dyrektor Instytutu Zoologii na Uniwersytecie Przyrodniczym w Poznaniu, ekspert Międzyrządowego Panelu ds. Zmian Klimatu (IPCC)"],
+    "topic": "Temat: „Robimy dobry klimat dla przyrody?”",
+    "date": "22 maja 2014"
+  },
+  {
+    "title": "25. Joanna Tomaszkiewicz",
+    "description": ["Joanna Tomaszkiewicz – ekspert w zakresie oceny oddziaływania na środowisko; niezależna konsultantka"],
+    "topic": "Temat: „Inwestorzy kontra przyroda – jak rozwiązywać konflikty środowiskowe”",
+    "date": "10 czerwca 2014"
+  },
+  {
+    "title": "26. Dr Leszek Trząski",
+    "description": ["Dr Leszek Trząski – biolog, kierownik Pracowni Studiów Środowiskowych i Programowania Ochrony Wód w Głównym Instytucie Górnictwa"],
+    "topic": "Temat: „Zielone miasta przyszłości”",
+    "date": "25 września  2014"
+  },
+  {
+    "title": "27. Jakub Sobiecki",
+    "description": ["Jakub Sobiecki – dietetyk, absolwent kierunku Dietetyka na Wydziale Nauk o Żywieniu Człowieka SGGW w Warszawie"],
+    "topic": "Temat: „Dieta optymalna dla środowiska, dieta optymalna dla zdrowia”",
+    "date": "22 października 2014"
+  },
+  {
+    "title": "28. Dr Nuria Selva Fernandez",
+    "description": ["Dr Nuria Selva Fernandez – hiszpańska biolog, zajmuje się badaniem niedźwiedzi i wilków, adiunkt w Instytucie Ochrony Przyrody PAN w Krakowie"],
+    "topic": "Temat: „Moje przygody z padlinożercami, czyli życie po życiu”",
+    "date": "25 listopada 2014"
+  },
+  {
+    "title": "29. Prof. dr hab. Szymon Malinowski",
+    "description": ["Prof. dr hab. Szymon Malinowski – fizyk atmosfery, ekspert od klimatu, kierownik Zakładu Fizyki Atmosfery Instytutu Geofizyki na Wydziale Fizyki Uniwersytetu Warszawskiego"],
+    "topic": "Temat: ”Czy grozi nam katastrofa klimatyczna?”",
+    "date": "10 grudnia 2014"
+  },
+  {
+    "title": "30. prof. dr hab. Jan Hartman",
+    "description": ["prof. dr hab. Jan Hartman – filozof i bioetyk, kierownik Zakładu Filozofii i Bioetyki Collegium Medicum Uniwersytetu Jagiellońskiego, wydawca i publicysta"],
+    "topic": "Temat: Zwierzę też człowiek",
+    "date": "24 lutego 2015"
+  },
+  {
+    "title": "31. Jacek Karczewski",
+    "description": ["Jacek Karczewski – prezes Stowarzyszenia Ptaki Polskie"],
+    "topic": "Temat: Martha i 15 miliardów",
+    "date": "11 czerwca 2015"
+  },
+  {
+    "title": "32. Tanna Jakubowicz-Mount",
+    "description": ["Tanna Jakubowicz-Mount – psychoterapeutka, prezeska Polskiego Forum Transpersonalnego, uczestniczyła w zakładaniu i działaniu różnych ośrodków terapeutycznych i ekologicznych"],
+    "topic": "Temat: Droga Wojownika Serca. Nie! dla świata podziału i przemocy. Tak! Dla świata połączenia i miłości",
+    "date": "13 października 2015"
+  },
+  {
+    "title": "33. Elżbieta Dzikowska",
+    "description": ["Elżbieta Dzikowska – podróżniczka, reżyser i operator filmów dokumentalnych, autorka wielu książek, programów telewizyjnych, audycji radiowych"],
+    "topic": "Temat: Świat, który może zaginąć",
+    "date": "10 listopada 2015"
+  },
+  {
+    "title": "34. Sutari",
+    "description": ["Sutari – tworzą trzy artystki z pogranicza muzyki i teatru. Zespół zadebiutował w 2012 roku na Festiwalu Folkowym Polskiego Radia „Nowa Tradycja”  zdobywając II nagrodę jury i nagrodę publiczności."],
+    "topic": "Temat: Koncert zespołu SUTARI. Rozmowa z członkiniami zespołu pt. „Ludzie – przyroda – dźwięki",
+    "date": "8 grudnia 2015"
+  },
+  {
+    "title": "35. Katarzyna Antonik-Heller",
+    "description": ["Katarzyna Antonik-Heller – biotechnolog i diet coach, właścicielka Skrzydeł Rozwoju, blogerka"],
+    "topic": "Temat: Moda na ekologiczną żywność – kaprys czy rzeczywista potrzeba?",
+    "date": "1 marca 2016 (kinoteatr RIALTO)"
+  },
+  {
+    "title": "36. Natalia Przybysz i Raphael Rogiński",
+    "description": ["Temat: Koncert zespołu Shy Albatross. Rozmowa z Natalią Przybysz i członkami zespołu pt. „Żyj prosto. Konsumuj mniej. Myśl więcej ”"],
+    "topic": "",
+    "date": "21 kwietnia 2016"
+  },
+  {
+    "title": "37. Adam Wajrak",
+    "description": ["Adam Wajrak – dziennikarz, obrońca przyrody, miłośnik zwierząt, autor książek i programów telewizyjnych"],
+    "topic": "Temat: Wajrak o Puszczy i zwierzętach",
+    "date": "2 czerwca 2016 (kinoteatr RIALTO)"
+  },
+  {
+    "title": "38. Dr Agnieszka Skorupa",
+    "description": [
+      "Dr Agnieszka Skorupa – Uniwersytet Śląski, Zakład Psychologii Ogólnej",
+      "Dr Agnieszka Wilczyńska – Krakowska Akademia im. Andrzeja Frycza Modrzewskiego, Wydział Psychologii i Nauk Humanistycznych",
+      "Krzysztof Pastuszka – psychoterapeuta w Samodzielnym Publicznym Zakładzie Terapii Uzależnień i Współuzależnienia w Siemianowicach Śląskich"
+    ],
+    "topic": "Temat: Projekcja najnowszego filmu Wernera Herzoga „Lo i stało się …” i panel dyskusyjny z udziałem ekspertów",
+    "date": "25 października 2016"
+  },
+  {
+    "title": "39. Krystian Matysek",
+    "description": ["Krystian Matysek – reżyser, scenarzysta, autor zdjęć do wielu filmów dokumentalnych, przyrodniczych, nagradzanych na festiwalach i sprzedawanych do stacji TV na całym świecie. Absolwent Wydziału Radia i Telewizji Uniwersytetu Śląskiego. Operator w filmach fabularnych. Wykładowca Akademii Sztuk Dokumentalnych. Ekspert Polskiego Instytutu Sztuki Filmowej."],
+    "topic": "Temat: Projekcja filmu Krystiana Matyska „Łowcy miodu” i spotkanie z reżyserem",
+    "date": "15 listopada 2016"
+  },
+  {
+    "title": "40. Oktawia Nowacka",
+    "description": ["Oktawia Nowacka – pięcioboistka, medalistka Igrzysk Olimpijskich w Rio de Janeiro (2016), zdobywczyni Pucharu Świata, medalistka mistrzostw Europy i mistrzostw Polski, weganka"],
+    "topic": "Temat: Wokół sportu i diety",
+    "date": "2 grudnia 2016"
+  },
+  {
+    "title": "41. Andrzej Guła",
+    "description": ["Andrzej Guła – prezes Krakowskiego Alarmu Smogowego, ekonomista środowiska, prezes Instytutu Ekonomii Środowiska"],
+    "topic": "Temat: Kiedy poradzimy sobie ze smogiem?",
+    "date": "15 marca 2017"
+  },
+  {
+    "title": "42. dr hab. Anna Orczewska",
+    "description": [
+      "dr hab. Anna Orczewska – Uniwersytet Śląski, Wydział Biologii i Ochrony Środowiska, Katedra Ekologii, botanik, ekolog lasu",
+      "mgr inż. Magdalena Biela – Zastępca Dyrektora Zakładu Zieleni Miejskiej w Katowicach, członek Polskiego Towarzystwa Chirurgów Drzew",
+      "dr hab. Adam Rostański – Uniwersytet Śląski, Wydział Biologii i Ochrony Środowiska, Katedra Botaniki i Ochrony Przyrody, botanik, Prezes Polskiego Towarzystwa Botanicznego"
+    ],
+    "topic": "Temat: Co z tymi drzewami?",
+    "date": "5 kwietnia 2017"
+  },
+  {
+    "title": "43. Same Suki",
+    "description": ["Same Suki – to rewolucyjna kobieca formacja folkowa grająca muzykę kobiet z miasta inspirowaną muzyką ludową; muzykę kobiet, które nie boją się sięgać do źródeł, żeby śpiewać swoim głosem o tym co tu i teraz."],
+    "topic": "Temat: Koncert zespołu Same Suki oraz rozmowa z członkiniami zespołu pt. „Dla przyrody”",
+    "date": "20 kwietnia 2017"
+  },
+  {
+    "title": "44. dr Małgorzata Kalemba-Drożdż",
+    "description": ["dr Małgorzata Kalemba-Drożdż – doktor biochemii, kulinarna blogerka, autorka książek kulinarnych"],
+    "topic": "Temat: Dlaczego warto jeść chwasty i kwiaty?",
+    "date": "7 czerwca 2017"
+  },
+  {
+    "title": "45. Marcin Kostrzyński",
+    "description": ["Marcin Kostrzyński – leśnik, były myśliwy, filmowiec, obserwator dzikiego życia, obrońca praw zwierząt"],
+    "topic": "Temat: Myśliwy, który zamienił strzelbę na aparat",
+    "date": "18 października 2017"
+  },
+  {
+    "title": "46. dr Aleksandra Kardaś",
+    "description": ["dr Aleksandra Kardaś – fizyczka atmosfery, ekspertka ds. klimatu, popularyzatorka nauki, specjalistka od transferu radiacyjnego w atmosferze oraz od nauczania o procesach i zjawiskach atmosferycznych, współtworzy portal popularno-naukowy „Nauka o klimacie”."],
+    "topic": "Temat: Projekcja filmu Luca Jacqueta (twórcy nagrodzonego Oscarem „Marszu Pingwinów”) „Między lodem a niebem” i panel dyskusyjny z udziałem eksperta – dr Aleksandrą Kardaś.",
+    "date": ""
+  },
+  {
+    "title": "47. Dorota Sumińska",
+    "description": ["Dorota Sumińska – lekarz weterynarii, pisarka, dziennikarka, zajmuje się psychologią zwierzęcą i prawami rządzącymi naturą"],
+    "topic": "Temat: Wierzę w zwierzę",
+    "date": "5 grudnia 2017"
+  },
+  {
+    "title": "48. dr Anna Kalinowska",
+    "description": [
+      "dr Anna Kalinowska – ekolożka z Uniwersytetu Warszawskiego",
+      "dr Zofia Prokop – biolożka z Uniwersytetu Jagiellońskiego",
+      "prof. dr hab. Piotr Skubała – ekolog z Uniwersytetu Śląskiego"
+    ],
+    "topic": "Temat: Naukowcy ostrzegają i apelują o ochronę naszej planety",
+    "date": "27 marca 2018 (kinoteatr RIALTO)"
+  },
+  {
+    "title": "49. „Chłopcy kontra Basia”",
+    "description": ["„Chłopcy kontra Basia” – zespół muzyczny grający muzykę folkową i jazzową. Czerpie inspiracje z polskich baśni, gawęd i przyśpiewek ludowych. Fascynuje się pradawnymi wierzeniami, nuconymi przez babcie kołysankami, demonicznymi postaciami i ciepłymi pieśniami o miłości."],
+    "topic": "Temat: Koncert zespołu „Chłopcy kontra Basia” oraz rozmowa z zespołem pt. „O czym opowiada przyroda?”",
+    "date": "20 kwietnia 2018"
+  },
+  {
+    "title": "50. Beata Hyży-Czołpińska",
+    "description": [
+      "Beata Hyży-Czołpińska – scenarzystka i reżyserka filmów dokumentalnych, fotografuje Puszczę Białowieską i aktywnie działa w jej obronie.",
+      "Projekcja filmu pt. „Miejsce w raju”"
+    ],
+    "topic": "Temat: Nie myśl, co możesz z Puszczy wziąć, tylko co możesz jej dać",
+    "date": "22 maja 2018"
+  },
+  {
+    "title": "51. Aneta Moczkowska",
+    "description": [
+      "Aneta Moczkowska – prezes Parku Śląskiego",
+      "dr hab. Adam Rostański – prezes Polskiego Towarzystwa Botanicznego."
+    ],
+    "topic": "Temat: Jakiego Parku Śląskiego oczekujemy?",
+    "date": "12 maja 2018"
+  },
+  {
+    "title": "52. dr hab. Ewa Bińczyk, prof. UMK",
+    "description": ["dr hab. Ewa Bińczyk, prof. UMK – filozofka, kierowniczka Zakładu Filozofii Nauki w Instytucie Filozofii Uniwersytetu im. Mikołaja Kopernika w Toruniu, autorka książki „Epoka człowieka. Retoryka i marazm antropocenu” (PWN 2018)"],
+    "topic": "Temat: „Czy epoka człowieka jest katastrofą w historii Ziemi?”",
+    "date": "23 października 2018"
+  },
+  {
+    "title": "53. Dr Adrian Wójcik",
+    "description": ["Dr Adrian Wójcik – Uniwersytet im. Mikołaja Kopernika w Toruniu, Katedra Psychologii, Prodziekan ds. badań naukowych i umiędzynarodowienia. Psycholog społeczny zajmujący się psychologią postaw prośrodowiskowych."],
+    "topic": "Temat: „Projekcja filmu „Punkt krytyczny …” – pierwszy polski film na temat zmian klimatu i rewolucji energetycznej \nunkt krytyczny. Energia OdNowa” i panel dyskusyjny z udziałem eksperta – dr Adrian Wójcik”",
+    "date": "26 listopada 2018"
+  },
+  {
+    "title": "54. Stuart Scott",
+    "description": [
+      "Stuart Scott – założyciel i dyrektor wykonawczy “The United Planet – Faith & Science Initiative” oraz “The Union of Concerned Citizens of Earth”. ). Założycielem i dyrektor „Interfaith Declaration on Climate Change”, zastępca dyrektora generalnego “International Ecological Safety Collaborative Organization (IESCO)”. Jest głębokim ekologiem, strategiem, edukatorem.",
+      "Marcin Popkiewicz – fizyk, pisarz, analityk megatrendów, ekspert i dziennikarz zajmujący się powiązaniami w obszarach gospodarka-energia-zasoby-środowisko. Autor bestsellerów „Świat na rozdrożu” i „Rewolucja energetyczna. Ale po co?”, współautor nowo wydanej „Nauki o klimacie”."
+    ],
+    "topic": "Temat: Projekcja filmu „Niewygodna prawda II” i panel dyskusyjny z udziałem ekspertów – Stuarta Scotta i Marcina Popkiewicza.",
+    "date": "5 grudnia 2018"
+  },
+  {
+    "title": "55. Michał Książek",
+    "description": [
+      "Michał Książek – poeta, ornitolog, leśnik, obrońca Puszczy Białowieskiej",
+      "Karolina Cicha – kompozytorka, wokalistka i multiinstrumentalista",
+      "Koncert „Wieloma językami” nawiązuje do tradycji Podlaskiego – regionu, z którego pochodzi Karolina Cicha. To koncert w dziewięciu językach, którymi posługują się mniejszości zamieszkujące ten skrawek Polski."
+    ],
+    "topic": "Temat: „Wieloma językami o ptakach, puszczy i przyrodzie”",
+    "date": "12 marca 2019"
+  },
+  {
+    "title": "56. Marcin Dorociński",
+    "description": ["Marcin Dorociński – aktor teatralny, telewizyjny i filmowy, ambasador fundacji WWF Polska, regularnie bierze udział w projektach związanych z ochroną przyrody i zwierząt"],
+    "topic": "Temat: „Dlaczego uzurpujemy sobie prawo do bycia najważniejszymi na ziemi?”",
+    "date": "26 kwietnia 2019"
+  },
+  {
+    "title": "57. Szymon Hołownia",
+    "description": ["Szymon Hołownia – dziennikarz, pisarz, publicysta i działacz społeczny"],
+    "topic": "Temat: „Boskie zwierzęta”",
+    "date": "28 maja 2019"
+  },
+  {
+    "title": "58. Pokaz filmu „Antropocen\" i spotkanie z dr hab. Julią Fiedorczuk",
+    "description": ["dr hab. Julia Fiedorczuk – polska poetka, pisarka, tłumaczka i krytyczka literacka, doktor habilitowana, nauczycielka akademicka w Instytucie Anglistyki UW i współtwórczyni Szkoły Ekopoetyki przy Instytucie Reportażu, laureatka Nagrody Poetyckiej im. Wisławy Szymborskiej 2018."],
+    "topic": "",
+    "date": "22 października 2019"
+  },
+  {
+    "title": "59. Youtuberzy w walce o lepszy świat – spotkanie z Orestesem Kowalskim „Everyday Hero”",
+    "description": ["Orestes Kowalski – aktywista w ruchu prozwierzęcym i aktywistyczny youtuber. Był inspektorem ochrony zwierząt we wrocławskiej Ekostraży, a następnie działał w Stowarzyszeniu Otwarte Klatki."],
+    "topic": "",
+    "date": "20 listopada 2019"
+  },
+  {
+    "title": "60. Spotkanie z liderami ruchów klimatycznych – „Nieposłuszeństwo obywatelskie w czasach kryzysu klimatycznego”",
+    "description": ["Młodzieżowy Strajk Klimatyczny, Extinction Rebellion Polska, Śląski Ruch Klimatyczny, Obóz dla Klimatu"],
+    "topic": "",
+    "date": "10 grudnia 2019"
+  },
+  {
+    "title": "61. „Czy to koniec człowieka na Ziemi?” - Jaś Kapela",
+    "description": ["Jaś Kapela – polski poeta i pisarz, zwycięzca pierwszego w historii polskiego slamu. Publicysta Krytyki Politycznej, aktywista lewicowy."],
+    "topic": "",
+    "date": "3 marca 2020"
+  },
+  {
+    "title": "62. „Świat ginie na naszych oczach i co dalej?” - Filip Springer",
+    "description": ["Filip Springer – polski reportażysta i fotoreporter."],
+    "topic": "",
+    "date": "25 września 2020"
+  },
+  {
+    "title": "63. „W imieniu zwierząt i przyrody” - Karolina Kuszlewicz",
+    "description": ["Karolina Kuszlewicz – adwokatka, działaczka społeczna, feministka, publicystka zajmująca się ochroną praw zwierząt. Uznana za najlepszego prawnika młodego pokolenia w Polsce w rankingu Rising Stars 2017 – Prawnicy Liderzy Jutra."],
+    "topic": "",
+    "date": "23 października 2020"
+  },
+  {
+    "title": "64. „Jak żyć w świecie, który oszalał” - Edwin Bendyk",
+    "description": ["Edwin Bendyk – polski dziennikarz, publicysta, zajmujący się problematyką cywilizacyjną i wpływem techniki na życie społeczne."],
+    "topic": "",
+    "date": "24 listopada 2020"
+  },
+  {
+    "title": "65. „Mów do mnie Naturo, mów” - dr Urszula Zajączkowska",
+    "description": ["dr Urszula Zajączkowska – polska poetka, botaniczka i artystka wideo."],
+    "topic": "",
+    "date": "11 grudnia 2020"
+  },
+  {
+    "title": "66. „W dzikości jest przetrwanie świata” - prof. dr hab. Łukasz Łuczaj",
+    "description": ["prof. dr hab. Łukasz Łuczaj – polski botanik, doktor habilitowany nauk biologicznych, wykładowca akademicki, kierownik Zakładu Botaniki Uniwersytetu Rzeszowskiego, popularyzator przyrody i działacz na rzecz jej ochrony, autor publikacji na temat dzikich roślin jadalnych."],
+    "topic": "",
+    "date": "15 marca 2021"
+  },
+  {
+    "title": "67. „Zwykli ludzie mogą robić niezwykłe rzeczy \/ Ordinary people can do extraordinary things” - Julia Butterfly Hill",
+    "description": ["Julia Butterfly Hill – jest amerykańską działaczką na rzecz środowiska . Najbardziej znana jest z tego, że mieszkała na 180-metrowej, około 1500-letniej sekwoi w Kalifornii przez 738 dni między 10 grudnia 1997 r. a 18 grudnia 1999 r."],
+    "topic": "",
+    "date": "13 kwietnia 2021"
+  },
+  {
+    "title": "68. \"Czy poradzimy sobie z naprawą naszego świata?\/Can we fix our world?” - prof. Ladislav Miko",
+    "description": ["prof. Ladislav Miko – czeski biolog, akarolog, urzędnik państwowy i europejski, minister środowiska, dyrektor Dyrekcji Generalnej ds Środowiska Komisji Europejskiej."],
+    "topic": "",
+    "date": "11 maja 2021"
+  },
+  {
+    "title": "69. „Ziemia - nasz jedyny, wspólny dom” – Ewa Ewart",
+    "description": ["Ewa Ewart – polska dziennikarka, reżyserka i producentka filmów dokumentalnych."],
+    "topic": "",
+    "date": "15 czerwca 2021"
+  }
+]

@@ -2,10 +2,7 @@ import { createStyles } from '@mantine/core';
 
 export const useStyles = createStyles((theme, _params, getRef) => ({
   card: {
-    width: '94vw',
-    maxWidth: '1000px',
-    minHeight: '300px',
-    height: 'fit-content',
+    height: '100%',
     backgroundColor: 'white',
     display: 'flex',
     justifyContent: 'space-between',
@@ -24,19 +21,22 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     },
   },
 
+  date: {
+    padding: '15px',
+    textAlign: 'center',
+    fontSize: 24,
+
+    [theme.fn.smallerThan('xs')]: {
+      fontSize: 18,
+    },
+  },
+
   content: {
     padding: '15px',
     textAlign: 'center',
-  },
-
-  video: {    
-    [`& iframe`]: {
-      width: '90vw',
-      height: '50.625vw',
-      maxWidth: '960px',
-      maxHeight: '540px',
-      borderRadius: '7px',
-      marginBottom: '-10px',
-    },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
 }));

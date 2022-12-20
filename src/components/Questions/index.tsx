@@ -1,7 +1,20 @@
 import React, { useState, useRef } from 'react';
-import { Checkbox, Slider, Collapse, NumberInput, Button, Box } from '@mantine/core';
-import { questionsList, resultsList } from '../../utils/questionsList';
+import { Checkbox, Slider, Collapse, Button, Box } from '@mantine/core';
 import { useStyles } from './styles';
+import questionsList from '../../utils/questions.json';
+
+type ResultsProps = {
+  boundary: number;
+  text: string;
+}
+
+const resultsList: ResultsProps[] = [
+  { boundary: 0, text: 'Dobra robota, żyjesz, prawie nie przekraczając swego udziału w ziemskich zasobach. Gdyby każdy żył tak jak Ty, prowadzilibyśmy styl życia określany mianem zrównoważonego. Prawie 70% ludności na Ziemi żyje w ten sposób' },
+  { boundary: 200, text: 'Twój ślad jest mniejszy niż średnia europejska. Gdyby każdy żył jak Ty, potrzebowalibyśmy dodatkowej planety, by sprostać konsumpcji. Około 15% ludności żyje w ten sposób.' },
+  { boundary: 400, text: 'Twój ślad odpowiada średniej europejskiej, przekracza trzykrotnie Twój udział w ziemskich zasobach. Gdyby każdy żył jak Ty, potrzebne by były dwie dodatkowe planety. Około 7% ludności żyje w ten sposób.' },
+  { boundary: 600, text: 'Twój ślad przekracza średnią europejską. Gdyby cała ludzkość prowadziła taki styl życia, potrzebne by były jeszcze trzy dodatkowe planety. Około 3% ludności żyje w ten sposób.' },
+  { boundary: 800, text: 'Twój ślad zbliżył się do tego, jaki pozostawia przeciętny Amerykanin. By sprostać takiej konsumpcji, potrzeba jeszcze czterech planet. Żyje tak około 5% ludzi.' },
+];
 
 export default function Questions() {
   const { classes, cx } = useStyles();
@@ -172,12 +185,12 @@ export default function Questions() {
                         min={question.slider.min}
                         max={question.slider.max}
                         defaultValue={question.slider.min}
-                        label={(value) => `${value}${question.slider?.label ?? ''}`}
-                        step={question.slider.step ?? 1}
+                        label={(value) => `${value}${question.slider?.label}`}
+                        step={question.slider.step}
                         marks={[
-                          { value: 0.2 * (question.slider.max - question.slider.min), label: `${0.2 * (question.slider.max - question.slider.min)}${question.slider?.label ?? ''}` },
-                          { value: 0.5 * (question.slider.max - question.slider.min), label: `${0.5 * (question.slider.max - question.slider.min)}${question.slider?.label ?? ''}` },
-                          { value: 0.8 * (question.slider.max - question.slider.min), label: `${0.8 * (question.slider.max - question.slider.min)}${question.slider?.label ?? ''}` },
+                          { value: 0.2 * (question.slider.max - question.slider.min), label: `${0.2 * (question.slider.max - question.slider.min)}${question.slider.label}` },
+                          { value: 0.5 * (question.slider.max - question.slider.min), label: `${0.5 * (question.slider.max - question.slider.min)}${question.slider.label}` },
+                          { value: 0.8 * (question.slider.max - question.slider.min), label: `${0.8 * (question.slider.max - question.slider.min)}${question.slider.label}` },
                         ]}
                         classNames={{
                           root: classes.sliderRoot,
