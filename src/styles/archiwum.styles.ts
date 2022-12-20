@@ -17,7 +17,5 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
 
   wrapper: {
     padding: '20px 3vw',
-    // width: '94vw',
-    // maxWidth: '1400px',
   },
 }));
