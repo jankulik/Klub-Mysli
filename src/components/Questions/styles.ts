@@ -20,20 +20,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     color: 'white',
   },
 
-  center: {
-    textAlign: 'center',
-  },
-  
-  break: {
-    display: 'block',
-    marginBottom: '0.3em',
-  },
-
-  checkboxText: {
-    color: 'white',
-    lineHeight: '1.2rem',
-  },
-
   buttonRoot: {
     backgroundColor: '#018032',
     margin: '10px 0px 10px',
@@ -42,25 +28,23 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
       backgroundColor: theme.fn.darken('#018032', 0.05),
     },
   },
-  
-  buttonBox: {
-    width: '100%',
+
+  wrapper: {
+    paddingBottom: '20px',
     display: 'flex',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    rowGap: '20px',
   },
 
-  rectangle: {
-    height: 'fit-content',
-    padding: '2rem 2rem',
-    background: '#018032',
-    boxShadow: '0px 0px 0.4rem black',
-    color: 'white',
-    borderRadius: '0.4rem',
-    margin: '10px 0 10px',
-  },
-  
-  results: {
-    maxWidth: '58.208125rem',
+  control: {
+    height: 42,
+    minWidth: '200px',
+    fontSize: theme.fontSizes.md,
+
+    [theme.fn.smallerThan('xs')]: {
+      width: '94vw',
+    },
   },
 }));

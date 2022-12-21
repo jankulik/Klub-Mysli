@@ -1,5 +1,5 @@
 import { useStyles } from '../styles/ekologia.styles';
-import Card from '../components/Card';
+import Card from '../components/EducationCard';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 

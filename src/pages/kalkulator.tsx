@@ -11,12 +11,10 @@ export default function Kalkulator() {
       <Head>
         <title>Kalkulator Śladu Ekologicznego | Klub Myśli Ekologicznej</title>
       </Head>
-      
+
       <Layout>
-        <div className={classes.wrapper}>
-          <div className={classes.flexContainer}>
-            <Questions />
-          </div>
+        <div className={classes.parallax}>
+          <Questions />
         </div>
       </Layout>
     </>

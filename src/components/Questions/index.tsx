@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
-import { Checkbox, Slider, Collapse, Button, Box } from '@mantine/core';
+import { Checkbox, Slider, Collapse, Button, Box, Center, Space } from '@mantine/core';
 import { useStyles } from './styles';
 import questionsList from '../../utils/questions.json';
+import QuestionCard from '../QuestionCard';
 
 type ResultsProps = {
   boundary: number;
@@ -102,25 +103,25 @@ export default function Questions() {
       setPoints(totalPoints);
   }
 
-  const renderResult = (result: number) => {
-    result = Math.round(result * 2)
+  const renderResultTitle = (result: number) => {
+    result = Math.round(result * 2);
+
+    return (`Twój wynik to ${result} ${((String(result).slice(-1) === '2' ||
+      String(result).slice(-1) === '3' ||
+      String(result).slice(-1) === '4') &&
+      String(result).slice(-2, -1) !== '1') ? ' punkty' : ' punktów'
+      }`);
+  }
+
+  const renderResultContent = (result: number) => {
+    result = Math.round(result * 2);
 
     for (let i = resultsList.length - 1; i >= 0; i--) {
       if (result >= resultsList[i].boundary) {
         return (
-          <div>
-            <div className={classes.center}>
-              <h2>Twój wynik to {result}
-                {((String(result).slice(-1) === '2' ||
-                  String(result).slice(-1) === '3' ||
-                  String(result).slice(-1) === '4') &&
-                  String(result).slice(-2, -1) !== '1') ? ' punkty' : ' punktów'}
-              </h2>
-            </div>
-
+          <>
             {result > 0 ?
               <>
-                <br />
                 Każdy punkt jest równoważny 0,01 ha &ndash; to oznacza, że {result}
                 {((String(result).slice(-1) === '2' ||
                   String(result).slice(-1) === '3' ||
@@ -130,29 +131,24 @@ export default function Questions() {
                 {resultsList[i].text}
               </> :
               null}
-          </div>
-        )
+          </>
+        );
       }
     }
   }
 
   return (
     <>
-      <div className={cx(classes.rectangle, classes.center)}>
-        <div>
-          <h1 style={{ lineHeight: '2rem' }}>Czy wystarczy nam Ziemi? Kalkulator śladu ekologicznego</h1>
-          <p><br />Wybierz wszystkie odpowiedzi, które są najbliższe Twojemu stylowi życia</p>
-        </div>
-      </div>
+      <div className={classes.wrapper} style={{ paddingTop: '20px' }}>
+        <QuestionCard title="Czy wystarczy nam Ziemi? Kalkulator śladu ekologicznego">
+          <Center>
+            Wybierz wszystkie odpowiedzi, które są najbliższe Twojemu stylowi życia
+          </Center>
+        </QuestionCard>
 
-      {questionsList.map((area) => {
-        return (
-          <div key={area.title} className={classes.rectangle}>
-            <div className={classes.center}>
-              <h2>{area.title}</h2>
-            </div>
-            <br />
-            <>
+        {questionsList.map((area) => {
+          return (
+            <QuestionCard key={area.title} title={area.title}>
               {area.questions.map((question) => {
                 if (question.value !== undefined) {
                   return (
@@ -162,13 +158,9 @@ export default function Questions() {
                         radius={4}
                         size='md'
                         color='green'
-                        label={
-                          <div className={classes.checkboxText}>
-                            {question.content}
-                          </div>
-                        }
+                        label={question.content}
                       />
-                      <span className={classes.break}></span>
+                      <Space h="sm" />
                     </div>
                   )
                 }
@@ -176,9 +168,9 @@ export default function Questions() {
                   return (
                     <div key={question.id}>
                       <br />
-                      <div className={classes.center}>
+                      <Center>
                         {question.content}
-                      </div>
+                      </Center>
                       <Slider
                         onChangeEnd={(state) => sliderChange(state, question.id)}
                         color='green'
@@ -186,6 +178,7 @@ export default function Questions() {
                         max={question.slider.max}
                         defaultValue={question.slider.min}
                         label={(value) => `${value}${question.slider?.label}`}
+                        size="lg"
                         step={question.slider.step}
                         marks={[
                           { value: 0.2 * (question.slider.max - question.slider.min), label: `${0.2 * (question.slider.max - question.slider.min)}${question.slider.label}` },
@@ -203,87 +196,79 @@ export default function Questions() {
                 }
 
               })}
-              {area.title === 'MIESZKANIE' ?
+              {area.title === 'Mieszkanie' ?
                 <>
-                  <div>
-                    <div className={classes.center}>
-                      Ile osób mieszka w Twoim domu?
-                    </div>
-                    <Slider
-                      onChangeEnd={(state) => {
-                        setInhabitantsRef(state)
-                        updateScore(checkboxStateRef.current, sliderStateRef.current, state)
-                      }}
-                      color='green'
-                      min={1}
-                      max={11}
-                      defaultValue={1}
-                      marks={[
-                        { value: 3, label: '3' },
-                        { value: 6, label: '6' },
-                        { value: 9, label: '9' },
-                      ]}
-                      classNames={{
-                        root: classes.sliderRoot,
-                        label: classes.sliderLabel,
-                        markLabel: classes.sliderMarkLabel,
-                      }}
-                    />
-                  </div>
+                  <Center>
+                    Ile osób mieszka w Twoim domu?
+                  </Center>
+                  <Slider
+                    onChangeEnd={(state) => {
+                      setInhabitantsRef(state)
+                      updateScore(checkboxStateRef.current, sliderStateRef.current, state)
+                    }}
+                    color='green'
+                    min={1}
+                    max={11}
+                    defaultValue={1}
+                    size="lg"
+                    marks={[
+                      { value: 3, label: '3' },
+                      { value: 6, label: '6' },
+                      { value: 9, label: '9' },
+                    ]}
+                    classNames={{
+                      root: classes.sliderRoot,
+                      label: classes.sliderLabel,
+                      markLabel: classes.sliderMarkLabel,
+                    }}
+                  />
                 </> :
                 null}
-            </>
-          </div>
-        );
-      })}
+            </QuestionCard>
+          );
+        })}
 
-      <Box className={classes.buttonBox}>
         <Button
           onClick={() => setOpened((o) => [!o[0], o[1]])}
-          classNames={{ root: classes.buttonRoot }}
+          className={classes.control}
+          variant='white'
+          size='lg'
         >
           Zobacz wynik
         </Button>
-      </Box>
+      </div>
 
       <Collapse in={opened[0]} transitionDuration={400}>
-        <div className={cx(classes.rectangle, classes.results)}>
-          {renderResult(points)}
+        <div className={classes.wrapper}>
+          <QuestionCard title={renderResultTitle(points)}>
+            {renderResultContent(points)}
+          </QuestionCard>
 
-          {points !== 0 ?
-            <>
-              <br />
-              <div className={classes.center}>
-                <h2>Co możesz zmienić?</h2>
-              </div>
-              <br />
-              Poniżej znajdziesz Twoje nawyki, które pozostawiają najwyższy ślad ekologiczny. Rezygnując z nich bezpośrednio przyczynisz się do poprawy kondycji naszej planety.
-            </> :
-            null}
-        </div>
-
-        <Box className={classes.buttonBox}>
           <Button
             onClick={() => setOpened((o) => [o[0], !o[1]])}
-            classNames={{ root: classes.buttonRoot }}
+            className={classes.control}
+            variant='white'
+            size='lg'
           >
             Zobacz szczegóły
           </Button>
-        </Box>
+        </div>
 
         <Collapse in={opened[1]} transitionDuration={400}>
-          <div className={cx(classes.rectangle, classes.results)}>
-            {resultsList.map((result, index, results) => {
-              return (
-                <div key={result.boundary}>
-                  {result.boundary === 800 ?
-                    <>ponad 800 pkt.&nbsp;&ndash;&nbsp;</> :
-                    <>{result.boundary}&nbsp;-&nbsp;{results[index + 1].boundary}&nbsp;pkt.&nbsp;&ndash;&nbsp;</>}
-                  {result.text}
-                  {result.boundary === 800 ? null : <><br /><br /></>}
-                </div>
-              )
-            })}
+          <div className={classes.wrapper}>
+            <QuestionCard>
+              {resultsList.map((result, index, results) => {
+                return (
+                  <div key={result.boundary}>
+                    {result.boundary === 800 ?
+                      <>ponad 800 pkt.&nbsp;&ndash;&nbsp;</> :
+                      <>{result.boundary}&nbsp;-&nbsp;{results[index + 1].boundary}&nbsp;pkt.&nbsp;&ndash;&nbsp;</>}
+                    {result.text}
+                    {result.boundary === 800 ? null : <><br /><br /></>}
+                  </div>
+                )
+              })}
+            </QuestionCard>
           </div>
         </Collapse>
       </Collapse>

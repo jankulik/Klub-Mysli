@@ -1,6 +1,6 @@
 [
   {
-    "title": "WODA",
+    "title": "Woda",
     "questions": [
       {
         "id": 0,
@@ -59,7 +59,7 @@
     ]
   },
   {
-    "title": "JEDZENIE",
+    "title": "Jedzenie",
     "questions": [
       {
         "id": 6,
@@ -99,7 +99,7 @@
     ]
   },
   {
-    "title": "MIESZKANIE",
+    "title": "Mieszkanie",
     "questions": [
       {
         "id": 13,
@@ -124,7 +124,7 @@
     ]
   },
   {
-    "title": "WAKACJE",
+    "title": "Wakacje",
     "questions": [
       {
         "id": 17,
@@ -217,7 +217,7 @@
     ]
   },
   {
-    "title": "OGRZEWANIE DOMU",
+    "title": "Ogrzewanie domu",
     "questions": [
       {
         "id": 25,
@@ -237,7 +237,7 @@
     ]
   },
   {
-    "title": "ELEKTRYCZNOŚĆ",
+    "title": "Elektryczność",
     "questions": [
       {
         "id": 28,
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "title": "CODZIENNE PODRÓŻE",
+    "title": "Codzienne podróże",
     "questions": [
       {
         "id": 34,
@@ -315,7 +315,7 @@
     ]
   },
   {
-    "title": "PAPIER",
+    "title": "Papier",
     "questions": [
       {
         "id": 38,
@@ -335,7 +335,7 @@
     ]
   },
   {
-    "title": "ODPADY",
+    "title": "Odpady",
     "questions": [
       {
         "id": 41,
