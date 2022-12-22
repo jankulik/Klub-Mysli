@@ -6,29 +6,40 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     minHeight: '400px',
     height: 'fit-content',
     backgroundColor: 'white',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
     borderRadius: '7px',
     width: '94vw',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    padding: '30px'
+  },
+
+  wrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
 
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
+      alignItems: 'center'
     },
   },
 
   image: {
     flex: '1 1 0',
     height: '370px',
-    padding: '0px 0px 0px 20px',
+    
+    [theme.fn.largerThan('sm')]: {            
+      marginRight: '20px',
+    },
 
     [theme.fn.smallerThan('sm')]: {            
-      padding: '20px',
+      marginBottom: '20px',
     },
   },
 
   content: {
-    padding: '30px',
     flex: '1.4 1 0',
     
     [theme.fn.largerThan('sm')]: {            
