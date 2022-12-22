@@ -23,12 +23,17 @@ export default function PhotoCard({ children, name, imageUrl, collapsible }: Pho
             alt={name}
             src={imageUrl}
             radius='md'
-            height={370}
+            height='100%'
           />
         </div>
 
         <div className={classes.content}>
-          <Title size={32}>{name}</Title>
+          <Title
+            size={32}
+            className={classes.title}
+          >
+            {name}
+          </Title>
           <Space h="sm" />
           {children}
 
@@ -57,7 +62,7 @@ export default function PhotoCard({ children, name, imageUrl, collapsible }: Pho
       </div>
 
       {collapsible != undefined &&
-        <Collapse in={controlsOpened} transitionDuration={200}>
+        <Collapse in={controlsOpened} transitionDuration={500}>
           <Space h={20} />
           {collapsible}
         </Collapse>

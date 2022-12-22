@@ -3,7 +3,6 @@ import { createStyles } from '@mantine/core';
 export const useStyles = createStyles((theme, _params, getRef) => ({
   card: {
     maxWidth: '1000px',
-    minHeight: '400px',
     height: 'fit-content',
     backgroundColor: 'white',
     borderRadius: '7px',
@@ -26,10 +25,13 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     },
   },
 
+  title: {
+    textAlign: 'left',
+  },
+
   image: {
     flex: '1 1 0',
-    height: '370px',
-    
+
     [theme.fn.largerThan('sm')]: {            
       marginRight: '20px',
     },
