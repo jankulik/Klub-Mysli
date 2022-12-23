@@ -22,5 +22,11 @@ export function RouterTransition() {
     };
   }, [router.asPath]);
 
-  return <NavigationProgress color={theme.colors.brand[6]} autoReset={true} />;
+  return (
+    <NavigationProgress
+      progressLabel="Ładowanie strony"
+      color={theme.colors.brand[6]}
+      autoReset={true}
+    />
+  );
 }

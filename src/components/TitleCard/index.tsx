@@ -13,6 +13,7 @@ export default function TitleCard({ title, imageUrl }: TitleCardProps) {
   return (
     <div className={classes.card}>
       <Image
+        alt=''
         src={imageUrl}
         layout='fill'
         objectFit='cover'

@@ -16,14 +16,14 @@ export default function Footer() {
         </Group>
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <Link href="https://www.facebook.com/klubmyslieko/" passHref>
-            <Button component="a" className={classes.icon}>
+            <Button component="a" className={classes.icon} aria-label="Facebook">
               <Center>
                 <IconBrandFacebook size={20} stroke={1.5} color='black' />
               </Center>
             </Button>
           </Link>
           <Link href="https://www.youtube.com/@klubmysliekologicznej5921" passHref>
-            <Button component="a" className={classes.icon}>
+            <Button component="a" className={classes.icon} aria-label="YouTube">
               <Center>
                 <IconBrandYoutube size={20} stroke={1.5} color='black' />
               </Center>

@@ -56,7 +56,7 @@ export default function Warsztaty({ workshops }: WorkshopsProps) {
             return (
               <PhotoCard
                 key={workshop.slug}
-                name={workshop.title}
+                title={workshop.title}
                 imageUrl={workshop.image}
                 collapsible={generateCollapsible(workshop.content)}
               >

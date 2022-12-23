@@ -36,7 +36,10 @@ export function LinksGroup({ handleClick, icon: Icon, label, link, links }: Link
 
   const items = (hasLinks ? links : []).map((subLink) => (
     <Link key={subLink.label} href={subLink.link} passHref>
-      <a onClick={() => handleClick()}>
+      <a
+        onClick={() => handleClick()}
+        aria-label={subLink.label}
+      >
         <div className={classes.subLink}>
           {subLink.label}
         </div>
@@ -73,7 +76,10 @@ export function LinksGroup({ handleClick, icon: Icon, label, link, links }: Link
         <>
           {link &&
             <Link href={link} passHref>
-              <a onClick={() => handleClick()}>
+              <a
+                onClick={() => handleClick()}
+                aria-label={label}
+                >
                 <div className={classes.control}>
                   <Group spacing={10}>
                     <ThemeIcon variant='light' size={30}>

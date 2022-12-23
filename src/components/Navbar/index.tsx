@@ -57,7 +57,10 @@ export default function Navbar() {
     <header className={classes.header}>
       <nav className={classes.navbar}>
         <Link href={'/'} passHref>
-          <a className={classes.logo}>
+          <a
+            className={classes.logo}
+            aria-label="Link do strony głównej"
+          >
             <Logo
               type={'logo-with-text'}
               size={50}
@@ -67,6 +70,7 @@ export default function Navbar() {
 
         <div className={classes.burger}>
           <Burger
+            title="Otwórz panel navigacyjny"
             ref={r => setBurgerRef(r)}
             opened={opened}
             onClick={toggle}

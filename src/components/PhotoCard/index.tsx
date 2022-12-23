@@ -5,12 +5,12 @@ import { useState, ReactNode } from 'react';
 
 interface PhotoCardProps {
   children: any;
-  name: string;
+  title: string;
   imageUrl: string;
   collapsible?: ReactNode;
 }
 
-export default function PhotoCard({ children, name, imageUrl, collapsible }: PhotoCardProps) {
+export default function PhotoCard({ children, title, imageUrl, collapsible }: PhotoCardProps) {
   const { classes } = useStyles();
 
   const [controlsOpened, setControlsOpened] = useState(false);
@@ -20,7 +20,7 @@ export default function PhotoCard({ children, name, imageUrl, collapsible }: Pho
       <div className={classes.wrapper}>
         <div className={classes.image}>
           <Image
-            alt={name}
+            alt={`Zdjęcie, na którym jest ${name}`}
             src={imageUrl}
             radius='md'
             height='100%'
@@ -32,7 +32,7 @@ export default function PhotoCard({ children, name, imageUrl, collapsible }: Pho
             order={2}
             className={classes.title}
           >
-            {name}
+            {title}
           </Title>
           <Space h="sm" />
 

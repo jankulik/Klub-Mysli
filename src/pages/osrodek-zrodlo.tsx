@@ -39,7 +39,7 @@ export default function OsrodekZrodlo() {
         />
 
         <div className={classes.wrapper}>
-          <PhotoCard name="Ośrodek Źródło" imageUrl='/images/zrodlo.jpg'>
+          <PhotoCard title="Ośrodek Źródło" imageUrl='/images/zrodlo.jpg'>
             <>
               <Text span fw={700}>Położenie: </Text>
               Ośrodek znajduje się w Beskidzie Makowskim w pobliżu góry Kurczyna, we wsi Łękawica, gmina Stryszów. W bezpośredniej okolicy las oraz łąka, nieco dalej średniowieczne grodzisko, jaskinia Mysiorowa Dziura oraz Jezioro Mucharskie. W pobliżu domu znajduje się oczko wodne oraz miejsce na ogień.

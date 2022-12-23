@@ -38,6 +38,7 @@ export default function Home() {
       <Layout imageUrl='images/fern.jpg'>
         <div className={classes.wrapperTop}>
           <Image
+            alt=''
             src={'/images/tree1.jpg'}
             layout='fill'
             objectFit='cover'
