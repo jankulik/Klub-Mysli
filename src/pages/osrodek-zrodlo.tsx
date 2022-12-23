@@ -4,6 +4,7 @@ import PhotoCard from '../components/PhotoCard';
 import { Text, Space, Button, Center } from '@mantine/core';
 import { useStyles } from '../styles/osrodek-zrodlo.styles';
 import Link from 'next/link';
+import TitleCard from '../components/TitleCard';
 
 export default function OsrodekZrodlo() {
   const { classes } = useStyles();
@@ -11,11 +12,33 @@ export default function OsrodekZrodlo() {
   return (
     <>
       <Head>
-        <title>O Nas | Klub Myśli Ekologicznej</title>
+        <title>Ośrodek Źródło | Klub Myśli Ekologicznej</title>
+        <meta
+          name="description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+          key="desc"
+        />
+        <meta
+          property="og:title"
+          content="Klub Myśli Ekologicznej"
+        />
+        <meta
+          property="og:description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+        />
+        <meta
+          property="og:image"
+          content="/images/tree1.jpg"
+        />
       </Head>
 
       <Layout>
         <div className={classes.parallax}>
+          <TitleCard
+            title='Ośrodek Źródło'
+            imageUrl='/images/bird.jpg'
+          />
+
           <div className={classes.wrapper}>
             <PhotoCard name="Ośrodek Źródło" imageUrl='/images/zrodlo.jpg'>
               <>
@@ -39,7 +62,7 @@ export default function OsrodekZrodlo() {
             </PhotoCard>
             <div className={classes.map}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10295.460163087464!2d19.57070753910457!3d49.82620170000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47167d4388c1bae9%3A0xd949a5f7a451335b!2zxYHEmWthd2ljYSAxNzUsIDM0LTEwMCDFgcSZa2F3aWNh!5e0!3m2!1sen!2spl!4v1670920826800!5m2!1sen!2spl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10295.460163087464!2d19.57070753910457!3d49.82620170000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47167d4388c1bae9%3A0xd949a5f7a451335b!2zxYHEmWthd2ljYSAxNzUsIDM0LTEwMCDFgcSZa2F3aWNh!5e0!3m2!1sen!2spl!4v1670920826800!5m2!1sen!2spl"  
                 width="600"
                 height="450"
                 style={{ border: 0 }}

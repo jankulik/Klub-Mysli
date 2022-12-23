@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://klub-mysli.vercel.app/sitemap.xml

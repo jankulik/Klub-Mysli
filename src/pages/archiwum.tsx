@@ -4,6 +4,7 @@ import { useStyles } from '../styles/archiwum.styles';
 import pastMeetings from '../utils/pastMeetings.json';
 import MeetingCard from '../components/MeetingCard';
 import { SimpleGrid } from '@mantine/core';
+import TitleCard from '../components/TitleCard';
 
 export default function Archiwum() {
   const { classes, theme } = useStyles();
@@ -12,10 +13,32 @@ export default function Archiwum() {
     <>
       <Head>
         <title>Archiwum | Klub Myśli Ekologicznej</title>
+        <meta
+          name="description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+          key="desc"
+        />
+        <meta
+          property="og:title"
+          content="Klub Myśli Ekologicznej"
+        />
+        <meta
+          property="og:description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+        />
+        <meta
+          property="og:image"
+          content="/images/tree1.jpg"
+        />
       </Head>
 
       <Layout>
         <div className={classes.parallax}>
+          <TitleCard
+            title='Archiwum'
+            imageUrl='/images/bird.jpg'
+          />
+
           <div className={classes.wrapper}>
 
             <SimpleGrid

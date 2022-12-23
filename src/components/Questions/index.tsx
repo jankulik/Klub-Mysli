@@ -140,7 +140,7 @@ export default function Questions() {
   return (
     <>
       <div className={classes.wrapper} style={{ paddingTop: '20px' }}>
-        <QuestionCard title="Czy wystarczy nam Ziemi? Kalkulator śladu ekologicznego">
+        <QuestionCard title="Czy wystarczy nam Ziemi?">
           <Center>
             Wybierz wszystkie odpowiedzi, które są najbliższe Twojemu stylowi życia
           </Center>

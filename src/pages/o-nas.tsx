@@ -4,6 +4,7 @@ import PhotoCard from '../components/PhotoCard';
 import { useStyles } from '../styles/o-nas.styles';
 import Link from 'next/link';
 import { Button } from '@mantine/core';
+import TitleCard from '../components/TitleCard';
 
 export default function ONas() {
   const { classes } = useStyles();
@@ -12,11 +13,34 @@ export default function ONas() {
     <>
       <Head>
         <title>O Nas | Klub Myśli Ekologicznej</title>
+        <meta
+          name="description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+          key="desc"
+        />
+        <meta
+          property="og:title"
+          content="Klub Myśli Ekologicznej"
+        />
+        <meta
+          property="og:description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+        />
+        <meta
+          property="og:image"
+          content="/images/tree1.jpg"
+        />
       </Head>
 
       <Layout>
         <div className={classes.parallax}>
+          <TitleCard
+            title='O Nas'
+            imageUrl='/images/bird.jpg'
+          />
+
           <div className={classes.wrapper}>
+
             <PhotoCard name='Piotr Skubała' imageUrl='/images/skubala.jpg'>
               Profesor nauk biologicznych na Wydziale Nauk Przyrodniczych Uniwersytetu Śląskiego. Ekolog, akarolog (zajmuje się ekologią i systematyką roztoczy Oribatida), autor 145 artykułów naukowych, 47 monografii lub rozdziałów w monografiach, 38 komunikatów naukowych oraz 135 artykułów popularnonaukowych. Etyk środowiskowy, edukator ekologiczny, działacz na rzecz ochrony przyrody; aktywista klimatyczny, lider Climate Reality Foundation Ala Gore’a, „ethic expert” w Komisji Europejskiej w Brukseli (program HORIZON 2020), członek komisji ds. GMO i GMM przy Ministrze Środowiska (2014-2019), stały współpracownik miesięczników AURA. Ochrona Środowiska i Dzikie Życie, współorganizator Festiwalu Kultury Ekologicznej „Zielono Mi”, organizator i współprowadzący spotkania Klubu Myśli Ekologicznej.
             </PhotoCard>

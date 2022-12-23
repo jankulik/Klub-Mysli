@@ -16,6 +16,23 @@ export default function Home() {
     <>
       <Head>
         <title>Klub Myśli Ekologicznej</title>
+        <meta
+          name="description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+          key="desc"
+        />
+        <meta
+          property="og:title"
+          content="Klub Myśli Ekologicznej"
+        />
+        <meta
+          property="og:description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+        />
+        <meta
+          property="og:image"
+          content="/images/tree1.jpg"
+        />
       </Head>
 
       <Layout>
@@ -72,7 +89,10 @@ export default function Home() {
             <Overlay color='#000' opacity={0.65} zIndex={1} />
 
             <div className={classes.inner}>
-              <Title className={classes.title}>
+              <Title
+                order={2}
+                className={classes.title}
+              >
                 Krótko o nas
               </Title>
 

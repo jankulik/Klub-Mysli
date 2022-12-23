@@ -14,7 +14,10 @@ export default function EducationCard({ children, title, documentUrl, videoId }:
 
   return (
     <div className={classes.card}>
-      <Title className={classes.title}>
+      <Title
+        order={2}
+        className={classes.title}
+      >
         {title}
       </Title>
       <Space h="sm" />

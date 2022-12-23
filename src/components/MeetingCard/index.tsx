@@ -20,7 +20,10 @@ export default function MeetingCard({ title, description, topic, date, individua
         maxWidth: individual ? '1000px' : undefined,
       }}
     >
-      <Title className={classes.title}>
+      <Title
+        order={2}
+        className={classes.title}
+      >
         {title}
       </Title>
 
@@ -47,7 +50,10 @@ export default function MeetingCard({ title, description, topic, date, individua
         }
       </div>
 
-      <Title className={classes.date}>
+      <Title
+        order={2}
+        className={classes.date}
+      >
         {date}
       </Title>
     </div>

@@ -13,7 +13,10 @@ export default function QuestionCard({ title, children }: QuestionCardProps) {
     <div className={classes.card}>
       {title != undefined &&
         <>
-          <Title className={classes.title}>
+          <Title
+            order={2}
+            className={classes.title}
+          >
             {title}
           </Title>
           {(children.length != null || children.props.children != null) &&

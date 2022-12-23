@@ -29,13 +29,13 @@ export default function PhotoCard({ children, name, imageUrl, collapsible }: Pho
 
         <div className={classes.content}>
           <Title
-            size={32}
+            order={2}
             className={classes.title}
           >
             {name}
           </Title>
           <Space h="sm" />
-          
+
           {children}
 
           {collapsible != undefined &&

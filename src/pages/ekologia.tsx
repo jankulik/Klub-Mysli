@@ -2,6 +2,7 @@ import { useStyles } from '../styles/ekologia.styles';
 import Card from '../components/EducationCard';
 import Layout from '../components/Layout';
 import Head from 'next/head';
+import TitleCard from '../components/TitleCard';
 
 export default function Ekologia() {
   const { classes } = useStyles();
@@ -10,10 +11,32 @@ export default function Ekologia() {
     <>
       <Head>
         <title>Ekologia | Klub Myśli Ekologicznej</title>
+        <meta
+          name="description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+          key="desc"
+        />
+        <meta
+          property="og:title"
+          content="Klub Myśli Ekologicznej"
+        />
+        <meta
+          property="og:description"
+          content="Klub Myśli Ekologicznej prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne."
+        />
+        <meta
+          property="og:image"
+          content="/images/tree1.jpg"
+        />
       </Head>
 
       <Layout>
         <div className={classes.parallax}>
+          <TitleCard
+            title='Ekologia'
+            imageUrl='/images/bird.jpg'
+          />
+
           <div className={classes.wrapper}>
             <Card
               title="Zapraszamy do lektury książki „Filozofia, psychologia i ekologia w edukacji dla zrównoważonego rozwoju” dostępnej jako bezpłatny pdf"
