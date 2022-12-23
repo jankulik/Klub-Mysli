@@ -37,7 +37,6 @@ export function ContactUs() {
 
     emailjs.sendForm('service_bx91ruu', 'template_5g13bni', formRef.current!, 'SgTjlkDyzYjc7GwiA')
       .then((result) => {
-        console.log(result.text);
         updateNotification({
           id: 'send-message',
           color: theme.colors[theme.primaryColor][6],

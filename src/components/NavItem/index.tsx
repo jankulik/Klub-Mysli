@@ -16,8 +16,10 @@ export default function NavItem({ links }: linksProps) {
       const subItems = link.links?.map((subLink) => {
         return (
           <div key={subLink.label}>
-            <Link href={subLink.link}>
-              <a className={classes.link}>{subLink.label}</a>
+            <Link href={subLink.link} passHref>
+              <a className={classes.link}>
+                {subLink.label}
+              </a>
             </Link>
           </div>
         )

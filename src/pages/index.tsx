@@ -41,6 +41,7 @@ export default function Home() {
             src={'/images/tree1.jpg'}
             layout='fill'
             objectFit='cover'
+            priority={true}
           />
           <Overlay color='#000' opacity={0.65} zIndex={1} />
 

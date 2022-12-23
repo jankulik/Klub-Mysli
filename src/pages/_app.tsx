@@ -3,14 +3,22 @@ import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import { RouterTransition } from '../components/RouterTransition';
+import { useState, useEffect } from 'react';
+import LoadingScreen from '../components/LoadingScreen';
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Klub Myśli Ekologicznej</title>
         <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
       </Head>
 
@@ -45,10 +53,14 @@ export default function App(props: AppProps) {
           }),
         }}
       >
-        <NotificationsProvider>
-          <RouterTransition />
-          <Component {...pageProps} />
-        </NotificationsProvider>
+        {loading ?
+          <LoadingScreen />
+          :
+          <NotificationsProvider>
+            <RouterTransition />
+            <Component {...pageProps} />
+          </NotificationsProvider>
+        }
       </MantineProvider>
     </>
   );
