@@ -29,11 +29,9 @@ export default function Kontakt() {
         />
       </Head>
 
-      <Layout>
-        <div className={classes.parallax}>
-          <div className={classes.wrapper}>
-            <ContactUs />
-          </div>
+      <Layout imageUrl='images/fern.jpg'>
+        <div className={classes.wrapper}>
+          <ContactUs />
         </div>
       </Layout>
     </>

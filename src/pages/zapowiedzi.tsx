@@ -31,27 +31,25 @@ export default function Zapowiedzi() {
         />
       </Head>
 
-      <Layout>
-        <div className={classes.parallax}>
-          <TitleCard
-            title='Zapowiedzi'
-            imageUrl='/images/bird.jpg'
-          />
+      <Layout imageUrl='images/fern.jpg'>
+        <TitleCard
+          title='Zapowiedzi'
+          imageUrl='/images/bird.jpg'
+        />
 
-          <div className={classes.wrapper}>
-            {upcomingMeetings.map((meeting) => {
-              return (
-                <MeetingCard
-                  key={meeting.title}
-                  title={meeting.title}
-                  description={meeting.description}
-                  topic={meeting.topic}
-                  date={meeting.date}
-                  individual={true}
-                />
-              );
-            })}
-          </div>
+        <div className={classes.wrapper}>
+          {upcomingMeetings.map((meeting) => {
+            return (
+              <MeetingCard
+                key={meeting.title}
+                title={meeting.title}
+                description={meeting.description}
+                topic={meeting.topic}
+                date={meeting.date}
+                individual={true}
+              />
+            );
+          })}
         </div>
       </Layout>
     </>

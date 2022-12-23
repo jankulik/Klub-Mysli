@@ -32,36 +32,34 @@ export default function Archiwum() {
         />
       </Head>
 
-      <Layout>
-        <div className={classes.parallax}>
-          <TitleCard
-            title='Archiwum'
-            imageUrl='/images/bird.jpg'
-          />
+      <Layout imageUrl='images/fern.jpg'>
+        <TitleCard
+          title='Archiwum'
+          imageUrl='/images/bird.jpg'
+        />
 
-          <div className={classes.wrapper}>
+        <div className={classes.wrapper}>
 
-            <SimpleGrid
-              cols={3}
-              breakpoints={[
-                { maxWidth: theme.breakpoints.lg, cols: 2, spacing: 'md' },
-                { maxWidth: theme.breakpoints.md, cols: 1, spacing: 'sm' },
-              ]}
-            >
-              {pastMeetings.slice(0).reverse().map((meeting) => {
-                return (
-                  <section key={meeting.title}>
-                    <MeetingCard
-                      title={meeting.title}
-                      description={meeting.description}
-                      topic={meeting.topic}
-                      date={meeting.date}
-                    />
-                  </section>
-                );
-              })}
-            </SimpleGrid>
-          </div>
+          <SimpleGrid
+            cols={3}
+            breakpoints={[
+              { maxWidth: theme.breakpoints.lg, cols: 2, spacing: 'md' },
+              { maxWidth: theme.breakpoints.md, cols: 1, spacing: 'sm' },
+            ]}
+          >
+            {pastMeetings.slice(0).reverse().map((meeting) => {
+              return (
+                <section key={meeting.title}>
+                  <MeetingCard
+                    title={meeting.title}
+                    description={meeting.description}
+                    topic={meeting.topic}
+                    date={meeting.date}
+                  />
+                </section>
+              );
+            })}
+          </SimpleGrid>
         </div>
       </Layout>
     </>

@@ -35,7 +35,7 @@ export default function Home() {
         />
       </Head>
 
-      <Layout>
+      <Layout imageUrl='images/fern.jpg'>
         <div className={classes.wrapperTop}>
           <Image
             src={'/images/tree1.jpg'}
@@ -85,71 +85,69 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={classes.parallax}>
-          <div className={classes.wrapperBottom} ref={targetRef}>
-            <Overlay color='#000' opacity={0.65} zIndex={1} />
+        <div className={classes.wrapperBottom} ref={targetRef}>
+          <Overlay color='#000' opacity={0.65} zIndex={1} />
 
-            <div className={classes.inner}>
-              <Title
-                order={2}
-                className={classes.title}
+          <div className={classes.inner}>
+            <Title
+              order={2}
+              className={classes.title}
+            >
+              Krótko o nas
+            </Title>
+
+            <Container size={640}>
+              <Text size='lg' className={classes.description}>
+                KME prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne.
+              </Text>
+              <List
+                mt={30}
+                spacing="sm"
+                size="sm"
+                icon={
+                  <ThemeIcon size={20} radius="xl">
+                    <IconCheck size={12} stroke={4} />
+                  </ThemeIcon>
+                }
               >
-                Krótko o nas
-              </Title>
+                <List.Item sx={{ color: 'white' }}>
+                  Edukacja ekologiczna i prośrodowiskowa
+                </List.Item>
+                <List.Item sx={{ color: 'white' }}>
+                  Promocja ochrony środowiska naturalnego poprzez zdrowy i ekologiczny styl życia
+                </List.Item>
+                <List.Item sx={{ color: 'white' }}>
+                  Budowanie ruchu społecznego wokół idei rozwoju świadomości ekologicznej
+                </List.Item>
+                <List.Item sx={{ color: 'white' }}>
+                  Rozwój i gromadzenie wiedzy w zakresie ekologii głębokiej i ekopsychologii
+                </List.Item>
+                <List.Item sx={{ color: 'white' }}>
+                  Wspieranie rozwoju społeczeństwa obywatelskiego w zakresie pobudzania aktywności proekologicznej obywateli
+                </List.Item>
+                <List.Item sx={{ color: 'white' }}>
+                  Działania na rzecz ekologii i ochrony zwierząt oraz ochrony dziedzictwa przyrodniczego
+                </List.Item>
+              </List>
+            </Container>
 
-              <Container size={640}>
-                <Text size='lg' className={classes.description}>
-                  KME prowadzi działalność z zakresu ochrony środowiska zmierzającą do wzrostu wiedzy i świadomości ekologicznej mieszkańców Śląska i całej Polski, a także zmiany ich postaw na bardziej proekologiczne.
-                </Text>
-                <List
-                  mt={30}
-                  spacing="sm"
-                  size="sm"
-                  icon={
-                    <ThemeIcon size={20} radius="xl">
-                      <IconCheck size={12} stroke={4} />
-                    </ThemeIcon>
-                  }
+
+            <div className={classes.controls}>
+              <Link href="/o-nas" passHref>
+                <Button
+                  onClick={() => scrollIntoView({ alignment: 'start' })}
+                  className={classes.control}
+                  variant='white'
+                  size='lg'
                 >
-                  <List.Item sx={{ color: 'white' }}>
-                    Edukacja ekologiczna i prośrodowiskowa
-                  </List.Item>
-                  <List.Item sx={{ color: 'white' }}>
-                    Promocja ochrony środowiska naturalnego poprzez zdrowy i ekologiczny styl życia
-                  </List.Item>
-                  <List.Item sx={{ color: 'white' }}>
-                    Budowanie ruchu społecznego wokół idei rozwoju świadomości ekologicznej
-                  </List.Item>
-                  <List.Item sx={{ color: 'white' }}>
-                    Rozwój i gromadzenie wiedzy w zakresie ekologii głębokiej i ekopsychologii
-                  </List.Item>
-                  <List.Item sx={{ color: 'white' }}>
-                    Wspieranie rozwoju społeczeństwa obywatelskiego w zakresie pobudzania aktywności proekologicznej obywateli
-                  </List.Item>
-                  <List.Item sx={{ color: 'white' }}>
-                    Działania na rzecz ekologii i ochrony zwierząt oraz ochrony dziedzictwa przyrodniczego
-                  </List.Item>
-                </List>
-              </Container>
-
-
-              <div className={classes.controls}>
-                <Link href="/o-nas" passHref>
-                  <Button
-                    onClick={() => scrollIntoView({ alignment: 'start' })}
-                    className={classes.control}
-                    variant='white'
-                    size='lg'
-                  >
-                    Dowiedz się więcej
-                  </Button>
-                </Link>
-                <Link href="/zapowiedzi" passHref>
-                  <Button className={classes.control} size="lg">
-                    Spotkania
-                  </Button>
-                </Link>
-              </div>
+                  Dowiedz się więcej
+                </Button>
+              </Link>
+              <Link href="/zapowiedzi" passHref>
+                <Button className={classes.control} size="lg">
+                  Spotkania
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

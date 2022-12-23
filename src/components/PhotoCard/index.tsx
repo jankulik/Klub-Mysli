@@ -1,5 +1,5 @@
 import { useStyles } from './styles';
-import { Title, Image, Center, Space, Button, Collapse, Text } from '@mantine/core';
+import { Title, Image, Center, Space, Button, Collapse } from '@mantine/core';
 import { IconChevronRight } from '@tabler/icons';
 import { useState, ReactNode } from 'react';
 

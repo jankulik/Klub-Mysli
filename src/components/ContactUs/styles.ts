@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 
 export const useStyles = createStyles((theme, _params, getRef) => ({
   wrapper: {
-    minHeight: 400,
+    minHeight: 594,
     boxSizing: 'border-box',
     backgroundImage: `linear-gradient(-60deg, ${theme.colors[theme.primaryColor][4]} 0%, ${theme.colors[theme.primaryColor][7]} 100%)`,
     borderRadius: theme.radius.md,

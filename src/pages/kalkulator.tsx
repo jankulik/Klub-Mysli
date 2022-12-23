@@ -30,15 +30,13 @@ export default function Kalkulator() {
         />
       </Head>
 
-      <Layout>
-        <div className={classes.parallax}>
-          <TitleCard
-            title='Kalkulator Śladu ekologicznego'
-            imageUrl='/images/bird.jpg'
-          />
+      <Layout imageUrl='images/fern.jpg'>
+        <TitleCard
+          title='Kalkulator Śladu ekologicznego'
+          imageUrl='/images/bird.jpg'
+        />
 
-          <Questions />
-        </div>
+        <Questions />
       </Layout>
     </>
   )

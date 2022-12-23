@@ -45,27 +45,25 @@ export default function Warsztaty({ workshops }: WorkshopsProps) {
         />
       </Head>
 
-      <Layout>
-        <div className={classes.parallax}>
-          <TitleCard
-            title='Warsztaty'
-            imageUrl='/images/bird.jpg'
-          />
+      <Layout imageUrl='images/fern.jpg'>
+        <TitleCard
+          title='Warsztaty'
+          imageUrl='/images/bird.jpg'
+        />
 
-          <div className={classes.wrapper}>
-            {workshops.map((workshop) => {
-              return (
-                <PhotoCard
-                  key={workshop.slug}
-                  name={workshop.title}
-                  imageUrl={workshop.image}
-                  collapsible={generateCollapsible(workshop.content)}
-                >
-                  {workshop.description}
-                </PhotoCard>
-              );
-            })}
-          </div>
+        <div className={classes.wrapper}>
+          {workshops.map((workshop) => {
+            return (
+              <PhotoCard
+                key={workshop.slug}
+                name={workshop.title}
+                imageUrl={workshop.image}
+                collapsible={generateCollapsible(workshop.content)}
+              >
+                {workshop.description}
+              </PhotoCard>
+            );
+          })}
         </div>
       </Layout>
     </>
