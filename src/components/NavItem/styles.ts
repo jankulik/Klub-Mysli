@@ -18,7 +18,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     backgroundColor: 'white',
     fontSize: '1rem',
     width: '160px',
-    borderRadius: '3px',
+    borderRadius: theme.radius.sm,
     boxShadow: '0px 0px 0.2rem 0px rgba(0, 0, 0, 0.4)',
     marginTop: '8px',
     marginLeft: 'calc(50% - 80px)',
@@ -45,7 +45,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: '7px',
-    borderRadius: '3px',
+    borderRadius: theme.radius.sm,
 
     '&:hover': {
       background: theme.colors.gray[1],

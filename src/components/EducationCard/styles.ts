@@ -11,11 +11,15 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
-    borderRadius: '7px',
+    borderRadius: theme.radius.md,
+    padding: '30px',
+
+    [theme.fn.smallerThan('sm')]: {
+      padding: '15px',
+    },
   },
 
   title: {
-    padding: '15px',
     textAlign: 'center',
     fontSize: 32,
 
@@ -25,7 +29,6 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   },
 
   content: {
-    padding: '15px',
     textAlign: 'center',
   },
 
@@ -33,10 +36,9 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     [`& iframe`]: {
       width: '90vw',
       height: '50.625vw',
-      maxWidth: '960px',
-      maxHeight: '540px',
-      borderRadius: '7px',
-      marginBottom: '-10px',
+      maxWidth: '940px',
+      maxHeight: '528.75px',
+      borderRadius: theme.radius.md,
     },
   },
 }));

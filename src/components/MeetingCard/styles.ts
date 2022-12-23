@@ -8,7 +8,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
-    borderRadius: '7px',
+    borderRadius: theme.radius.md,
   },
 
   title: {

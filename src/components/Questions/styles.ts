@@ -2,17 +2,13 @@ import { createStyles } from '@mantine/core';
 
 export const useStyles = createStyles((theme, _params, getRef) => ({
   sliderRoot: {
-    marginTop: '0.5rem',
-    paddingBottom: '1.5rem',
+    marginTop: '12px',
+    paddingBottom: '24px',
 
     // [`@media (min-width: ${theme.breakpoints.sm}px)`]: {
     //   marginRight: '12vw',
     //   marginLeft: '12vw',
     // },
-  },
-
-  sliderLabel: {
-    marginTop: -4,
   },
 
   sliderMarkLabel: {

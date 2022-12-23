@@ -6,20 +6,20 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     maxWidth: '1000px',
     height: 'fit-content',
     backgroundColor: 'white',
-    borderRadius: '7px',
+    borderRadius: theme.radius.md,
+    padding: '30px',
+
+    [theme.fn.smallerThan('sm')]: {
+      padding: '15px',
+    },
   },
 
   title: {
-    padding: '15px',
     textAlign: 'center',
     fontSize: 32,
 
     [theme.fn.smallerThan('xs')]: {
       fontSize: 24,
     },
-  },
-
-  content: {
-    padding: '15px',
   },
 }));

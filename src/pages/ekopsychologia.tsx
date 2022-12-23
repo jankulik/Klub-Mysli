@@ -44,7 +44,7 @@ export default function Ekopsychologia() {
             </Card>
 
             <Card
-              title="Wykład dr Ryszarda Kulika"
+              title="Wykład dr. Ryszarda Kulika"
               videoId='sW4sE06GjyY'
             >
               Człowiek i inne gatunki – łódzkie spotkania ekozoficzne. Ekologia głęboka czyli filozofia w służbie Ziemi

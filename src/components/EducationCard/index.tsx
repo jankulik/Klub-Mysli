@@ -1,5 +1,5 @@
 import { useStyles } from './styles';
-import { Button, Title } from '@mantine/core';
+import { Button, Title, Space } from '@mantine/core';
 import Link from 'next/link';
 
 interface EducationCardProps {
@@ -17,6 +17,7 @@ export default function EducationCard({ children, title, documentUrl, videoId }:
       <Title className={classes.title}>
         {title}
       </Title>
+      <Space h="sm" />
 
       {documentUrl != undefined &&
         <Link href={documentUrl} passHref>
@@ -40,6 +41,7 @@ export default function EducationCard({ children, title, documentUrl, videoId }:
         </div>
       }
 
+      <Space h="sm" />
       <div className={classes.content}>
         {children}
       </div>

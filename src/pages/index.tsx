@@ -25,7 +25,7 @@ export default function Home() {
             layout='fill'
             objectFit='cover'
           />
-          <Overlay color='#000' opacity={0.4} zIndex={1} />
+          <Overlay color='#000' opacity={0.65} zIndex={1} />
 
           <div className={classes.inner}>
             <Title
@@ -69,7 +69,7 @@ export default function Home() {
 
         <div className={classes.parallax}>
           <div className={classes.wrapperBottom} ref={targetRef}>
-            <Overlay color='#000' opacity={0.4} zIndex={1} />
+            <Overlay color='#000' opacity={0.65} zIndex={1} />
 
             <div className={classes.inner}>
               <Title className={classes.title}>

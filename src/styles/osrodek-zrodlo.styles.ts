@@ -28,7 +28,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     [`& iframe`]: {
       width: '94vw',
       maxWidth: '1000px',
-      borderRadius: '7px',
+      borderRadius: theme.radius.md,
     },
   },
 }));

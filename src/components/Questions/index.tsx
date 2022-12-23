@@ -187,7 +187,6 @@ export default function Questions() {
                         ]}
                         classNames={{
                           root: classes.sliderRoot,
-                          label: classes.sliderLabel,
                           markLabel: classes.sliderMarkLabel,
                         }}
                       />
@@ -218,7 +217,6 @@ export default function Questions() {
                     ]}
                     classNames={{
                       root: classes.sliderRoot,
-                      label: classes.sliderLabel,
                       markLabel: classes.sliderMarkLabel,
                     }}
                   />

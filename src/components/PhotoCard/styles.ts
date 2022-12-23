@@ -5,13 +5,17 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     maxWidth: '1000px',
     height: 'fit-content',
     backgroundColor: 'white',
-    borderRadius: '7px',
+    borderRadius: theme.radius.md,
     width: '94vw',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    padding: '30px'
+    padding: '30px',
+
+    [theme.fn.smallerThan('sm')]: {
+      padding: '15px',
+    },
   },
 
   wrapper: {
@@ -27,6 +31,11 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
 
   title: {
     textAlign: 'left',
+    fontSize: 32,
+
+    [theme.fn.smallerThan('xs')]: {
+      fontSize: 24,
+    },
   },
 
   image: {

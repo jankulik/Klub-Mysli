@@ -29,9 +29,9 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   icon: {
     padding: 6,
     borderRadius: theme.radius.sm,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
 
-    "&:hover": {
+    '&:hover': {
       backgroundColor: theme.colors.gray[1],
     },
   }

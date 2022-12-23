@@ -1,5 +1,5 @@
 import { useStyles } from './styles';
-import { Title } from '@mantine/core';
+import { Title, Space } from '@mantine/core';
 
 interface QuestionCardProps {
   title?: string;
@@ -12,15 +12,20 @@ export default function QuestionCard({ title, children }: QuestionCardProps) {
   return (
     <div className={classes.card}>
       {title != undefined &&
-        <Title className={classes.title}>
-          {title}
-        </Title>
+        <>
+          <Title className={classes.title}>
+            {title}
+          </Title>
+          {(children.length != null || children.props.children != null) &&
+            <Space h="sm" />
+          }
+        </>
       }
 
       {(children.length != null || children.props.children != null) &&
-        <div className={classes.content}>
+        <>
           {children}
-        </div>
+        </>
       }
     </div>
   );

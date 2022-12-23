@@ -35,6 +35,7 @@ export default function PhotoCard({ children, name, imageUrl, collapsible }: Pho
             {name}
           </Title>
           <Space h="sm" />
+          
           {children}
 
           {collapsible != undefined &&
