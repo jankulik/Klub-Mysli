@@ -38,24 +38,27 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     },
   },
 
-  image: {
-    flex: '1 1 0',
-
-    [theme.fn.largerThan('sm')]: {            
-      marginRight: '20px',
-    },
-
-    [theme.fn.smallerThan('sm')]: {            
-      marginBottom: '20px',
+  content: {
+    [theme.fn.largerThan('sm')]: {
+      flex: '1.4 1 0',
+      textAlign: 'justify',
+      textJustify: 'inter-word',
     },
   },
 
-  content: {
-    flex: '1.4 1 0',
-    
-    [theme.fn.largerThan('sm')]: {            
-      textAlign: 'justify',
-      textJustify: 'inter-word',
+  image: {
+    position: 'relative',
+    overflow: 'hidden',
+    borderRadius: theme.radius.md,
+    minHeight: '300px',
+
+    [theme.fn.largerThan('sm')]: {
+      flex: '1 1 0',
+      marginRight: '20px',
+    },
+
+    [theme.fn.smallerThan('sm')]: {
+      marginBottom: '20px',
     },
   },
 }));
