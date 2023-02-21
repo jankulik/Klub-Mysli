@@ -21,7 +21,6 @@ export default function PhotoCard({ children, title, imageUrl, collapsible }: Ph
 
   useEffect(() => {
     contentRef.current != null && setContentHeight(contentRef.current.clientHeight);
-    console.log(contentRef.current.clientHeight);
   });
 
   const isSmallScreen = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
@@ -33,10 +32,9 @@ export default function PhotoCard({ children, title, imageUrl, collapsible }: Ph
             className={classes.image}
             style={{
               height: isSmallScreen ? 'calc(94vw - 30px)' : contentHeight,
-              width: isSmallScreen ? 'calc(94vw - 30px)' : 'fit-content',
+              width: isSmallScreen ? 'calc(94vw - 30px)' : 'unset',
             }}
           >
-
             <Image
               src={imageUrl}
               alt={`Zdjęcie, na którym jest ${title}`}

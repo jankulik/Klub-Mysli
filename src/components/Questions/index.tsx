@@ -18,7 +18,7 @@ const resultsList: ResultsProps[] = [
 ];
 
 export default function Questions() {
-  const { classes, cx } = useStyles();
+  const { classes } = useStyles();
 
   const checkboxValues: Array<number> = [];
   const sliderValues: Array<number> = []
